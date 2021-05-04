@@ -1,0 +1,20 @@
+title: Actualite
+preset: page
+pages: false
+
+fields:
+  cover: 
+    label: Image de couverture
+    type: files
+  datefield: 
+    label: Date
+    type: date
+  summary: 
+    label: Texte d'accroche
+    type: markdown
+  text:
+    label: Texte
+    type: markdown
+    size: medium
+
+

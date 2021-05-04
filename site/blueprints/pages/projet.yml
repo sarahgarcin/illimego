@@ -1,0 +1,23 @@
+title: Projet
+preset: page
+pages: false
+
+fields:
+  cover: 
+    label: Image de couverture
+    type: files
+    multiple: false
+  summary: 
+    label: Texte d'introduction
+    type: markdown
+  year: 
+    label: Date du projet
+    type: text
+  text:
+    label: Texte 
+    type: markdown
+  infos:
+    label: Infos projet 
+    type: markdown
+
+

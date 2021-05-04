@@ -1,0 +1,10 @@
+title: Accueil
+
+fields: 
+  projects:
+    label: Projets à afficher sur la page d'accueil
+    type: checkboxes
+    options: query
+    query: site.find('projets').children.children.published
+
+

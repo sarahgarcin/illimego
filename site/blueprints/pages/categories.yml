@@ -1,0 +1,5 @@
+title: Catégories
+preset: pages
+pages : true
+drafts: 
+  template: projet

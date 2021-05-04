@@ -1,0 +1,14 @@
+title: Actualités
+# preset: pages
+# pages : true
+# drafts: 
+#   template: actu
+
+
+sections:
+  listed:
+    headline: Pages
+    type: pages
+    templates: actu
+    layout: list
+    info: "{{ page.datefield}}"

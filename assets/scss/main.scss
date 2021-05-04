@@ -1,0 +1,61 @@
+// I M P O R T
+// -------------- MOBILE-FIRST --------------
+@import "_variables.scss";
+
+*{
+  box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+	margin: 0 0px; 
+  font-size: 16px; 
+  font-family: $textFont;
+}
+
+// -------------- RESET.CSS --------------
+ul, ol{margin:0; padding:0;}
+li{list-style:none;}
+a{color: #000;text-decoration: none;}
+a:visited{color: $mainColor;}
+img {width: 100%;}
+figure{margin:0;}
+h1, h2, h3, h4, h5, h6{
+  font-family: $titleFont;
+}
+
+// -------------- IMPORT TEMPlATES STYLES --------------
+@import "header.scss";
+@import "home.scss";
+@import "article.scss";
+
+
+// -------------- MOBILE-FIRST GENERAL --------------
+.show-for-small-only{
+	display:block;
+}
+
+.hide-for-small-only{
+	display:none;
+}
+
+main{
+  padding-top: 200px; 
+}
+
+
+// -------------- DESKTOP GENERAL --------------
+@media only screen and (min-width: 64em){
+  .show-for-small-only{
+      display:none !important;
+  }
+  .hide-for-small-only{
+      display:block !important;
+  }
+}
+
+
+
+
+

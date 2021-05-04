@@ -1,0 +1,29 @@
+@import "../fonts/stylesheet.css";
+
+
+// Margin variables
+$marginNormal: 20px;  
+$marginBig: $marginNormal *2;  
+$marginSmall: $marginNormal/2;
+
+// Colors
+$mainColor: #000; 
+
+// Fonts
+$titleFont : "Bw Gradual";
+$textFont : "IBM Plex Serif";
+$infosFont : "IBM Plex Mono";
+
+// FontSize
+$mobileMenu : 1.35em;
+$mobileTitle : 2.5em;
+$mobileText : 1.2em;
+ 
+// Mixins
+@mixin center{
+	display: block;
+	position: relative; 
+	top: 50%;
+	transform: translateY(-50%);
+}
+

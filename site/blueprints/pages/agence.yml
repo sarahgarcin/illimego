@@ -1,0 +1,19 @@
+title: Agence
+preset: page
+pages: false
+
+fields:
+  cover: 
+    label: Image de couverture
+    type: files
+  text:
+    label: Texte
+    type: markdown
+    size: medium
+  contact: 
+    label: Contact
+    type: markdown
+  publications: 
+    label: Publications
+    type: markdown
+
