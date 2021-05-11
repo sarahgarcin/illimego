@@ -35,11 +35,36 @@ function init(){
 		var submenu = $(this).find('.main-nav_submenu');
 	  if(submenu.hasClass('active')){
 	    submenu.removeClass("active");
+	    $(this).removeClass('active');
 	  }
 	  else{
 	  	submenu.addClass("active");
+	  	$(this).addClass('active');
 	  }
 
+	});
+
+	// --------------  HOME -------------- 
+	// Packery
+
+	$('.list-projects_selected').packery({
+	  // options
+	  itemSelector: 'li',
+	  gutter: 0
+	});
+
+	//  -------------- actualités ---------------
+	// déplier actualités
+	$('.actualite .see-more').on('click', function(){
+		$('.actualite').find('.content-to-hide').removeClass('active');
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+		}
+		else{
+			$('.actualite .see-more').removeClass('active');
+			$(this).addClass('active');
+			$(this).parents('.actualite').find('.content-to-hide').addClass('active');
+		}	
 	});
 
 }

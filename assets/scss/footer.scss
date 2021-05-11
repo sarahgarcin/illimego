@@ -1,0 +1,45 @@
+// -------------- MOBILE-FIRST FOOTER --------------
+
+footer{
+	width: 100%;
+	max-width: 100%;
+	position: fixed;
+	left:0;
+	bottom:0; 
+	background: #FFF;
+	z-index: 10000;
+	padding: $marginPage; 
+	&.row{margin:0;}
+	a{text-decoration:none;}
+	.lower-right-text, .lower-left-text{
+		font-family: $titleFont;
+		font-weight: 100;
+		font-size: $mobileMenu;
+	}
+	.lower-right-text{
+		text-align: right;
+	}
+	.lower-left-text{
+		text-align: left;
+	}
+}
+
+// -------------- DESKTOP FOOTER --------------
+@media only screen and (min-width: 64em){
+	footer{
+		background: transparent;
+	}
+	.inner-footer{
+		position: relative;
+	}
+	.lower-right-text{
+		text-align: left !important;
+		transform: rotate(-90deg);
+		width: 120px;
+		position: absolute;
+		right: -$marginPage;
+		bottom: $marginPage;
+	}
+}
+
+

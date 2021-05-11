@@ -1,4 +1,21 @@
+<!-- footer mobile -->
+<footer class="mobile-footer show-for-small-only">
+  <div class="lower-right-text">
+    <?= $site->lefttext()?>
+  </div>
+</footer>
 
+<footer class="desktop-footer hide-for-small-only">
+  <div class="inner-footer">
+    <div class="lower-left-text">
+      <?= $site->lefttext()?>
+    </div>
+    <div class="lower-right-text">
+      <?= $site->righttext()?>
+    </div>
+  </div>
+  
+</footer>
 
   <!-- scripts -->
   <?php

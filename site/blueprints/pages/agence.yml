@@ -16,4 +16,21 @@ fields:
   publications: 
     label: Publications
     type: markdown
+  equipe: 
+    label: L'équipe
+    type: structure
+    fields: 
+      cover: 
+        label: Image portrait
+        type: files
+      name: 
+        label: Nom
+        type: text
+      role: 
+        label: Rôle
+        type: markdown
+      diplome: 
+        label: Diplôme / Mini biographie
+        type: markdown
+
 

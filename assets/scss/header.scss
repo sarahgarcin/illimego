@@ -19,6 +19,7 @@ header{
 	.mobile-menu_title h1{
 		font-weight: 100;
 		font-size: 41px;
+		margin:0;
 	}
 	.mobile-menu_logo{
 		padding: $marginSmall $marginNormal 0 $marginNormal;
@@ -53,7 +54,7 @@ header{
 		max-height:0; 
 		overflow:hidden; 
 		background: #FFF;
-		margin:0;
+		// margin:0;
 		padding-left: 5.5vw;
 		width: 100%;
 		transition: all 1s linear;
@@ -64,7 +65,8 @@ header{
 	}
 	.main-nav{
 		margin-top: $marginNormal;
-		li{
+		padding: 0 $marginPage 0 0;
+		& > ul > li{
 			padding-top: 2px; 
 			padding-bottom:2px;
 			cursor: pointer;
@@ -77,11 +79,19 @@ header{
 			padding-top: $marginSmall;
 			padding-bottom: $marginSmall;
 			text-transform: uppercase;
+			transition: text-align 0.3s linear;
 			a{color: $mainColor;}
 			&.active{
 				color: #000;
-				&::before{color: #000;}
-			}				
+				& > span{
+					display: block;
+					text-align: left;
+					margin-bottom: $marginNormal;
+				}
+			}	
+			&:last-child{
+				border-bottom: 1px solid $mainColor;
+			}			
 		}
 	}
 	.main-nav_first-level{
@@ -102,11 +112,29 @@ header{
 		max-height:0;
 		overflow: hidden; 
 		padding: 0;
-		transition: max-height 0.3s linear, padding 0.2s linear 0.2s, border-bottom-width 0.2s linear;
+		transition: max-height 1s linear;
+		& > li{
+		 	font-size: 0.55em;
+		 	text-transform: uppercase; 
+		 	border: none;
+		 	text-align: left;
+		 	font-weight: 500;
+		 	margin-bottom: $marginSmall;
+		 	&:before{
+		 		content: "–";
+		 	}
+		 	.main-nav_sub-submenu{
+		 		& > li{
+		 			text-transform: none;
+		 			font-size: 1.3em;
+		 			font-weight: 300;
+		 		}
+		 	}
+		}
 		&.active{
-			padding: $marginSmall;
-			max-height: 200px; 
-			transition: all 0.3s linear;
+			// padding: $marginSmall;
+			max-height: 3000px; 
+			transition: all 1s linear;
 		}
 		a.active{color:#000;}
 	}
@@ -117,19 +145,27 @@ header{
 @media only screen and (min-width: 64em){
 	header{
 		position: fixed;
-		padding: $marginSmall 0px;
+		padding: $marginPage;
+		background: transparent;
+		// .nav{
+		// 	display:flex; 
+		// 	height:auto; 
+		// 	min-height:auto;
+		// 	max-height: none;
+		// 	padding-left: $marginBig;
+		// }
 		.nav{
-			display:flex; 
-			height:auto; 
-			min-height:auto;
-			max-height: none;
-			padding-left: $marginBig;
+			padding: 0;
+		}
+		.mobile-menu_title {
+			h1{
+				margin-top: -10px;
+				font-size: $desktopTitle;
+			}
 		}
 		.main-nav{
 			margin-top:0;
-		}
-		.main-nav_first-level{
-			display: flex;
+			font-size: $desktopMenu;	
 		}
 		.main-nav_submenu{
 			position: absolute;
@@ -149,6 +185,14 @@ header{
 		}
 		.desktop-menu{
 			padding: 0;
+			width: 100%;
+			.desktop-menu_logo{
+				// background: #FFF;
+				figure{width: 60px;}
+			}
+			.desktop-menu_nav{
+				padding-top: $marginSmall;
+			}
 		}
 	}
 }

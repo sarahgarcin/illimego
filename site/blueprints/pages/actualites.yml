@@ -12,3 +12,4 @@ sections:
     templates: actu
     layout: list
     info: "{{ page.datefield}}"
+    sortBy: datefield desc

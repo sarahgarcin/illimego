@@ -5,6 +5,7 @@
 $marginNormal: 20px;  
 $marginBig: $marginNormal *2;  
 $marginSmall: $marginNormal/2;
+$marginPage : 28px;
 
 // Colors
 $mainColor: #000; 
@@ -18,6 +19,12 @@ $infosFont : "IBM Plex Mono";
 $mobileMenu : 1.35em;
 $mobileTitle : 2.5em;
 $mobileText : 1.2em;
+
+$desktopMenu : 1em;
+$desktopSmallText : 0.9em;
+$desktopTitle : 32px;
+$desktopText : 0.9em;
+$desktopSmallSmall : 0.75em;
  
 // Mixins
 @mixin center{

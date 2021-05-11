@@ -1,16 +1,27 @@
 # Job log
 
 ## Questions
-- Il se passe quoi quand une actualité est passée ? Elle disparait ? Elle reste? Elle s'archive ? 
-- Les actualités sont classées comment ? Par date ? du plus récent au plus vieux? C'est eux qui décident de l'ordre ?
---> les actus s'empilent du plus récent au plus vieux
-
 - tu peux m'envoyer le logo png clean ?
 - est-ce que pour ouvrir le menu burger on peut aussi cliquer sur "illimego" ?
 --> oui 
+- qu'est ce qui peut apparaître sur la page d'accueil ? Si il y a les actualités, qu'est ce que ça affiche comme légende ? peut-être il faut juste mettre les pages projets non ? 
 
 
 ## Log
 - j'ai fait tout le back sauf réseaux sociaux (barre footer)
 - intégration des typos
 - settings des variables css (conversion de pt vers px)
+- homepage smartphone ok 
+- template projet smartphone ok
+- y a encore des bugs sur le menu smartphone (dans les transitions)
+- dans le template projets : difficulté à faire un prev / next bouton
+- template home desktop v1
+- template projets desktop v1
+- template projet desktop v1
+- template actualites desktop v1
+
+
+
+
+
+

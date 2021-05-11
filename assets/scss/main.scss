@@ -9,9 +9,10 @@
 }
 
 body{
-	margin: 0 0px; 
+	margin: $marginPage; 
   font-size: 16px; 
   font-family: $textFont;
+  line-height: 1.22;
 }
 
 // -------------- RESET.CSS --------------
@@ -23,13 +24,26 @@ img {width: 100%;}
 figure{margin:0;}
 h1, h2, h3, h4, h5, h6{
   font-family: $titleFont;
+  font-weight: 100;
+}
+h1{
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: $desktopTitle;
+}
+p{
+  margin: $marginNormal 0;
+}
+
+figure.portrait{
+  width: 70%;
 }
 
 // -------------- IMPORT TEMPlATES STYLES --------------
 @import "header.scss";
 @import "home.scss";
 @import "article.scss";
-
+@import "footer.scss";
 
 // -------------- MOBILE-FIRST GENERAL --------------
 .show-for-small-only{
@@ -40,18 +54,182 @@ h1, h2, h3, h4, h5, h6{
 	display:none;
 }
 
-main{
-  padding-top: 200px; 
+main, aside{
+  padding-top: 100px; 
+}
+
+.no-padding-top{
+  padding-top: 0;
+}
+
+.page_header{
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  left:0; 
+  top: 100px; 
+  background: #FFF;
+  z-index: 10000; 
+  &.row{margin:0;}
+}
+
+// ACTUALITÉS
+.content-to-hide{ 
+  max-height:0; 
+  overflow: hidden;
+  transition: all 0.5s ease;
+  &.active{
+    max-height: 2000px;
+    transition: all 0.5s ease;
+  }
+}
+
+article.actualite{
+  margin-bottom: $marginBig*2;
+}
+
+.actualite_title{
+  margin-bottom: $marginNormal;
+  margin-left: 0;
+  margin-right: 0;
+  h2{
+    margin: 0;
+    font-weight: 500; 
+    text-transform: uppercase;
+    font-size: $desktopText;
+  }
+  .actualite_date{
+    font-family: $titleFont;
+    font-size: $desktopText;
+  }
+}
+
+.see-more{
+  text-transform: uppercase;
+  font-size: $desktopSmallSmall;
+  text-align: right;
+  font-family: $titleFont;
+  cursor: pointer;
+  &:hover{
+    font-weight: 500;
+  }
+}
+
+// PROJETS
+aside.list-projects_text{
+  li{
+    font-family: $titleFont;
+    font-weight: 300;
+    &:hover{
+      font-weight: 500;
+      &::before{
+        content: "–";
+      }
+    }
+  }
+}
+
+.list-projects_template{
+  .list-project_infos{
+    position: relative;
+    opacity: 1; 
+    padding-left: 0;
+  }
+}
+
+// PROJET
+.projet_images-gallery{
+  figure{margin-bottom: $marginNormal;}
+}
+
+aside.projet_text-projet{
+  padding-right:$marginBig;
+}
+
+.projet_infos-text{
+  margin-top: $marginBig;
+  h2{
+    text-transform: uppercase;
+    font-size: $desktopSmallSmall;
+    font-weight: normal;
+  }
+  p{
+    font-size: $desktopSmallSmall;
+    font-family: $infosFont;
+  }
+}
+
+// Agence
+.agence_text-inner_main{
+  p:first-child{
+    margin-top: 0px;
+  }
+}
+
+.agence_text-inner_aside{
+  h3{
+    margin-top:0;
+    text-transform: uppercase; 
+    font-weight: 500;
+    font-size: $desktopText;
+  }
+  p + h3{
+    margin-top: $marginBig;
+  }
+  p{
+    font-size: $desktopSmallSmall;
+  }
+}
+
+.agence_equipe{
+  h2{
+    font-size: $desktopTitle; 
+  }
+  li{
+    margin-bottom: $marginBig;
+    h3{
+      margin-bottom:0;
+      text-transform: uppercase; 
+      font-weight: 500;
+      font-size: $desktopText;
+    }
+    p{
+      margin:0;
+    }
+    .role{
+      &::after{
+        content: "—";
+        display: block;
+      }
+    }
+
+  }
+  
 }
 
 
 // -------------- DESKTOP GENERAL --------------
 @media only screen and (min-width: 64em){
+  body{
+    margin-bottom: 100px;
+  }
+  p{
+    font-size: $desktopText;
+    line-height: 1.3;
+  }
   .show-for-small-only{
       display:none !important;
   }
   .hide-for-small-only{
-      display:block !important;
+      display:block;
+  }
+
+  .hide-for-small-only.row{
+      display:flex;
+  }
+
+  main{
+    padding-top: 0px; 
   }
 }
 

@@ -1,7 +1,45 @@
 // -------------- MOBILE-FIRST HOME --------------
+.list-projects li{
+  margin-bottom: $marginNormal;
+  padding-right: $marginSmall;
+  padding-left: $marginSmall;
+}
+
 
 // -------------- DESKTOP HOME --------------
 @media only screen and (min-width: 64em){
+	.list-projects_selected li{
+		width: 45%;
+	}
+	.list-projects li{
+		position: relative;
+		// opacity: 0.9;
+		// transition: opacity 0.2s ease;
+		// &:hover{
+		// 	opacity: 1;
+		// }
+	}
+	.list-project_infos{
+		font-family: $titleFont;
+		font-size: $desktopSmallText;
+		opacity: 0; 
+		position: absolute;
+		bottom: 0;
+		left:$marginSmall;
+		right:0;
+		background: #FFF;
+		padding: $marginSmall;
+		transition: opacity 0.2s ease, background 0.2s ease;
+		&::before{
+			content: "—";
+		}
+	}
+	
+	.list-projects li:hover .list-project_infos{
+		// display: block !important;
+		opacity: 1;
+		background: rgba(255, 255, 255, 0.7); 
+	}
 
 }
 

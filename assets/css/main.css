@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../fonts/stylesheet.css);
 * {
   -webkit-box-sizing: border-box;
@@ -6,9 +7,10 @@
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  margin: 0 0px;
+  margin: 28px;
   font-size: 16px;
-  font-family: "IBM Plex Serif"; }
+  font-family: "IBM Plex Serif";
+  line-height: 1.22; }
 
 ul, ol {
   margin: 0;
@@ -31,7 +33,19 @@ figure {
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bw Gradual"; }
+  font-family: "Bw Gradual";
+  font-weight: 100; }
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 32px; }
+
+p {
+  margin: 20px 0; }
+
+figure.portrait {
+  width: 70%; }
 
 header {
   width: 100%;
@@ -58,7 +72,8 @@ header {
     width: 100%; }
   header .mobile-menu_title h1 {
     font-weight: 100;
-    font-size: 41px; }
+    font-size: 41px;
+    margin: 0; }
   header .mobile-menu_logo {
     padding: 10px 20px 0 20px;
     width: 25%;
@@ -103,7 +118,6 @@ header {
     max-height: 0;
     overflow: hidden;
     background: #FFF;
-    margin: 0;
     padding-left: 5.5vw;
     width: 100%;
     -webkit-transition: all 1s linear;
@@ -113,8 +127,9 @@ header {
       max-height: 100vh;
       overflow: auto; }
   header .main-nav {
-    margin-top: 20px; }
-    header .main-nav li {
+    margin-top: 20px;
+    padding: 0 28px 0 0; }
+    header .main-nav > ul > li {
       padding-top: 2px;
       padding-bottom: 2px;
       cursor: pointer;
@@ -126,13 +141,20 @@ header {
       border-top: 1px solid #000;
       padding-top: 10px;
       padding-bottom: 10px;
-      text-transform: uppercase; }
-      header .main-nav li a {
+      text-transform: uppercase;
+      -webkit-transition: text-align 0.3s linear;
+      -o-transition: text-align 0.3s linear;
+      transition: text-align 0.3s linear; }
+      header .main-nav > ul > li a {
         color: #000; }
-      header .main-nav li.active {
+      header .main-nav > ul > li.active {
         color: #000; }
-        header .main-nav li.active::before {
-          color: #000; }
+        header .main-nav > ul > li.active > span {
+          display: block;
+          text-align: left;
+          margin-bottom: 20px; }
+      header .main-nav > ul > li:last-child {
+        border-bottom: 1px solid #000; }
   header .main-nav_first-level > li:hover, header .main-nav_first-level > li:hover > a {
     color: #000; }
     header .main-nav_first-level > li:hover::before, header .main-nav_first-level > li:hover > a::before {
@@ -145,36 +167,43 @@ header {
     max-height: 0;
     overflow: hidden;
     padding: 0;
-    -webkit-transition: max-height 0.3s linear, padding 0.2s linear 0.2s, border-bottom-width 0.2s linear;
-    -o-transition: max-height 0.3s linear, padding 0.2s linear 0.2s, border-bottom-width 0.2s linear;
-    transition: max-height 0.3s linear, padding 0.2s linear 0.2s, border-bottom-width 0.2s linear; }
+    -webkit-transition: max-height 1s linear;
+    -o-transition: max-height 1s linear;
+    transition: max-height 1s linear; }
+    header .main-nav_submenu > li {
+      font-size: 0.55em;
+      text-transform: uppercase;
+      border: none;
+      text-align: left;
+      font-weight: 500;
+      margin-bottom: 10px; }
+      header .main-nav_submenu > li:before {
+        content: "–"; }
+      header .main-nav_submenu > li .main-nav_sub-submenu > li {
+        text-transform: none;
+        font-size: 1.3em;
+        font-weight: 300; }
     header .main-nav_submenu.active {
-      padding: 10px;
-      max-height: 200px;
-      -webkit-transition: all 0.3s linear;
-      -o-transition: all 0.3s linear;
-      transition: all 0.3s linear; }
+      max-height: 3000px;
+      -webkit-transition: all 1s linear;
+      -o-transition: all 1s linear;
+      transition: all 1s linear; }
     header .main-nav_submenu a.active {
       color: #000; }
 
 @media only screen and (min-width: 64em) {
   header {
     position: fixed;
-    padding: 10px 0px; }
+    padding: 28px;
+    background: transparent; }
     header .nav {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      height: auto;
-      min-height: auto;
-      max-height: none;
-      padding-left: 40px; }
+      padding: 0; }
+    header .mobile-menu_title h1 {
+      margin-top: -10px;
+      font-size: 32px; }
     header .main-nav {
-      margin-top: 0; }
-    header .main-nav_first-level {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
+      margin-top: 0;
+      font-size: 1em; }
     header .main-nav_submenu {
       position: absolute;
       top: 100%;
@@ -193,7 +222,78 @@ header {
       header .main-nav_submenu li {
         padding: 0px 10px; }
     header .desktop-menu {
-      padding: 0; } }
+      padding: 0;
+      width: 100%; }
+      header .desktop-menu .desktop-menu_logo figure {
+        width: 60px; }
+      header .desktop-menu .desktop-menu_nav {
+        padding-top: 10px; } }
+
+.list-projects li {
+  margin-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+@media only screen and (min-width: 64em) {
+  .list-projects_selected li {
+    width: 45%; }
+  .list-projects li {
+    position: relative; }
+  .list-project_infos {
+    font-family: "Bw Gradual";
+    font-size: 0.9em;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    background: #FFF;
+    padding: 10px;
+    -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+    -o-transition: opacity 0.2s ease, background 0.2s ease;
+    transition: opacity 0.2s ease, background 0.2s ease; }
+    .list-project_infos::before {
+      content: "—"; }
+  .list-projects li:hover .list-project_infos {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.7); } }
+
+footer {
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #FFF;
+  z-index: 10000;
+  padding: 28px; }
+  footer.row {
+    margin: 0; }
+  footer a {
+    text-decoration: none; }
+  footer .lower-right-text, footer .lower-left-text {
+    font-family: "Bw Gradual";
+    font-weight: 100;
+    font-size: 1.35em; }
+  footer .lower-right-text {
+    text-align: right; }
+  footer .lower-left-text {
+    text-align: left; }
+
+@media only screen and (min-width: 64em) {
+  footer {
+    background: transparent; }
+  .inner-footer {
+    position: relative; }
+  .lower-right-text {
+    text-align: left !important;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 120px;
+    position: absolute;
+    right: -28px;
+    bottom: 28px; } }
 
 .show-for-small-only {
   display: block; }
@@ -201,11 +301,133 @@ header {
 .hide-for-small-only {
   display: none; }
 
-main {
-  padding-top: 200px; }
+main, aside {
+  padding-top: 100px; }
+
+.no-padding-top {
+  padding-top: 0; }
+
+.page_header {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  top: 100px;
+  background: #FFF;
+  z-index: 10000; }
+  .page_header.row {
+    margin: 0; }
+
+.content-to-hide {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .content-to-hide.active {
+    max-height: 2000px;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+
+article.actualite {
+  margin-bottom: 80px; }
+
+.actualite_title {
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0; }
+  .actualite_title h2 {
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em; }
+  .actualite_title .actualite_date {
+    font-family: "Bw Gradual";
+    font-size: 0.9em; }
+
+.see-more {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  text-align: right;
+  font-family: "Bw Gradual";
+  cursor: pointer; }
+  .see-more:hover {
+    font-weight: 500; }
+
+aside.list-projects_text li {
+  font-family: "Bw Gradual";
+  font-weight: 300; }
+  aside.list-projects_text li:hover {
+    font-weight: 500; }
+    aside.list-projects_text li:hover::before {
+      content: "–"; }
+
+.list-projects_template .list-project_infos {
+  position: relative;
+  opacity: 1;
+  padding-left: 0; }
+
+.projet_images-gallery figure {
+  margin-bottom: 20px; }
+
+aside.projet_text-projet {
+  padding-right: 40px; }
+
+.projet_infos-text {
+  margin-top: 40px; }
+  .projet_infos-text h2 {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: normal; }
+  .projet_infos-text p {
+    font-size: 0.75em;
+    font-family: "IBM Plex Mono"; }
+
+.agence_text-inner_main p:first-child {
+  margin-top: 0px; }
+
+.agence_text-inner_aside h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9em; }
+
+.agence_text-inner_aside p + h3 {
+  margin-top: 40px; }
+
+.agence_text-inner_aside p {
+  font-size: 0.75em; }
+
+.agence_equipe h2 {
+  font-size: 32px; }
+
+.agence_equipe li {
+  margin-bottom: 40px; }
+  .agence_equipe li h3 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9em; }
+  .agence_equipe li p {
+    margin: 0; }
+  .agence_equipe li .role::after {
+    content: "—";
+    display: block; }
 
 @media only screen and (min-width: 64em) {
+  body {
+    margin-bottom: 100px; }
+  p {
+    font-size: 0.9em;
+    line-height: 1.3; }
   .show-for-small-only {
     display: none !important; }
   .hide-for-small-only {
-    display: block !important; } }
+    display: block; }
+  .hide-for-small-only.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  main {
+    padding-top: 0px; } }

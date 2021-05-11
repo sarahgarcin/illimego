@@ -1,11 +1,24 @@
 <?php snippet('header') ?>
 <?php snippet('menu') ?>
+<?php $projets = $kirby->collection("projets");?>
 
-	<main>
-		<ul class="list-projects list-projects_selected row col-xs-12 col-md-7 col-md-offset-3">
-		  <?php foreach ($page->projects()->split() as $project): ?>
+<div class="row">
+	<aside class="list-projects_text col-xs-12 col-md-3">
+			<ul>
+		 <?php foreach ($projets as $projet): ?>
+		 		<li>
+		 			<a href="<?= $projet->url()?>" title="<?= $projet->title()?>">
+		 				<?= $projet->title()?>
+		 			</a>
+		 		</li>
+		 <?php endforeach?>	
+		 </ul>
+	</aside>
+	<main class="col-xs-12 col-md-6">
+		<h1><?= $page->title()->html()?></h1>
+		<ul class="list-projects list-projects_template row">
+		  <?php foreach ($projets as $project): ?>
 		  	<li class="col-xs-12 col-sm-6">
-		  		<?php $project = $site->find($project)?>
 		  		<a href="<?= $project->url()?>" title="<?= $project->title()?>">
 			  		<div class="list-project_thumbs">
 			  			<?php $image = $project->cover()->toFile() ?>
@@ -22,6 +35,8 @@
 		  	</li>
 		  <?php endforeach ?>
 		</ul>
+		
 	</main>
+</div>
 
 <?php snippet('footer') ?>
