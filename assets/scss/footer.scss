@@ -24,6 +24,30 @@ footer{
 	}
 }
 
+.languages{
+	background: #FFF;
+	li{
+		font-family: $titleFont; 
+		text-transform: uppercase;
+		font-size: $desktopSmallSmall;
+		margin: $marginSmall 0;
+		&:not(.active){
+			display: none;
+			margin-left: 15px;
+		}
+		&.active{
+			display: block;
+			.select-btn{
+				display:inline-block;
+			}
+		}
+		.select-btn{
+			cursor: pointer;
+			display:none;
+		}
+	}
+}
+
 // -------------- DESKTOP FOOTER --------------
 @media only screen and (min-width: 64em){
 	footer{

@@ -6,13 +6,12 @@ $(document).ready(function(){
 function init(){
 
 	// -------------- OPEN MENU MOBILE --------------- //
-	var menuBtn = document.querySelector('.mobile-menu_btn');
 	var nav = $('.nav');
 	var barBurger1 = $('span:nth-child(1)');
 	var barBurger2 = $('span:nth-child(2)');
 	var barBurger3 = $('span:nth-child(3)');
 
-	$('.mobile-menu_btn').on("click", function(e){
+	$('.mobile-menu_btn, .mobile-menu_title').on("click", function(e){
 	  if(nav.hasClass('active')){
 	    nav.removeClass("active");
 	    barBurger1.removeClass("rotate-top");
@@ -46,12 +45,18 @@ function init(){
 
 	// --------------  HOME -------------- 
 	// Packery
+		// init Packery
+		var $grid = $('.list-projects_selected').packery({
+		  itemSelector: 'li',
+	  	gutter: 0
+		});
+		$grid.packery();
+		// layout Packery after each image loads
+		// $grid.imagesLoaded().progress( function() {
+		//   $grid.packery();
+		// });
 
-	$('.list-projects_selected').packery({
-	  // options
-	  itemSelector: 'li',
-	  gutter: 0
-	});
+
 
 	//  -------------- actualités ---------------
 	// déplier actualités
@@ -65,6 +70,19 @@ function init(){
 			$(this).addClass('active');
 			$(this).parents('.actualite').find('.content-to-hide').addClass('active');
 		}	
+	});
+
+	// select menu for footer
+	$('.select-btn').on('click', function(){
+		if($(this).hasClass('active')){
+			$('.languages li:not(".active")').css('display', "none");
+			$(this).removeClass('active').html('▼');
+		}
+		else{
+			$('.languages li').css('display', "block");
+			$(this).addClass('active').html('▲');
+		}
+
 	});
 
 }

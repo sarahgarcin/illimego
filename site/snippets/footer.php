@@ -13,6 +13,7 @@
     <div class="lower-right-text">
       <?= $site->righttext()?>
     </div>
+    <?php snippet('languages')?>
   </div>
   
 </footer>

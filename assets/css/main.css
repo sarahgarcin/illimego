@@ -73,7 +73,8 @@ header {
   header .mobile-menu_title h1 {
     font-weight: 100;
     font-size: 41px;
-    margin: 0; }
+    margin: 0;
+    cursor: pointer; }
   header .mobile-menu_logo {
     padding: 10px 20px 0 20px;
     width: 25%;
@@ -279,6 +280,24 @@ footer {
     text-align: right; }
   footer .lower-left-text {
     text-align: left; }
+
+.languages {
+  background: #FFF; }
+  .languages li {
+    font-family: "Bw Gradual";
+    text-transform: uppercase;
+    font-size: 0.75em;
+    margin: 10px 0; }
+    .languages li:not(.active) {
+      display: none;
+      margin-left: 15px; }
+    .languages li.active {
+      display: block; }
+      .languages li.active .select-btn {
+        display: inline-block; }
+    .languages li .select-btn {
+      cursor: pointer;
+      display: none; }
 
 @media only screen and (min-width: 64em) {
   footer {
