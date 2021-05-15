@@ -1,4 +1,4 @@
-<div class="nav col-xs-12 col-md-2 col-md-offset-10 row">
+<div class="nav row col-md-12">
 	<!-- Mobile nav -->
 	<nav class="main-nav main-nav_mobile col-xs-12 show-for-small-only">
 		<ul class="main-nav_first-level">
@@ -51,4 +51,6 @@
 	</nav>
 
 </div>
+
+
 

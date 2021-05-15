@@ -2,8 +2,6 @@
 
 ## To do 
 - faire les filtres 
-- config pour version anglaise
-- footer : réseaux sociaux + page mentions légales etc.
 - version smarphone à peaufiner
 - version tablette ?
 - version grand ordi ?
@@ -28,6 +26,8 @@
 - template actualites desktop v1
 - template agence desktop v1
 - rendre "ilimego" cliquable pour ouverture de menu 
+- config pour version anglaise 
+- footer : réseaux sociaux + page mentions légales etc.
 
 
 

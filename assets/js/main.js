@@ -46,7 +46,7 @@ function init(){
 	// --------------  HOME -------------- 
 	// Packery
 		// init Packery
-		var $grid = $('.list-projects_selected').packery({
+		var $grid = $('.list-projects').packery({
 		  itemSelector: 'li',
 	  	gutter: 0
 		});

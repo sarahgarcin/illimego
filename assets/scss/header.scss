@@ -166,22 +166,25 @@ header{
 		}
 		.main-nav{
 			margin-top:0;
+			padding: 0;
+			margin-bottom:$marginBig;
+			padding-left: 55px;
 			font-size: $desktopMenu;	
-		}
-		.main-nav_submenu{
-			position: absolute;
-			top: 100%;
-			left:0; 
-			right:0;
-			padding: 0 $marginNormal;
-			display:flex;
-			justify-content: center;
-			background: #FFF; 
-			&.active{
-				padding: $marginSmall $marginNormal;
-			}
-			li{
-				padding: 0px $marginSmall;
+			ul > li {
+				font-size: $desktopMenu;
+				text-transform: inherit;
+				text-align: left;
+				border: none;
+				padding: 4px;
+				&:last-child{border:none;}
+				&.active{
+					font-weight: 500;
+					&::before{
+						content: "•";
+						margin-right: 10px;
+						margin-left: -20px;
+					}
+				}
 			}
 		}
 		.desktop-menu{

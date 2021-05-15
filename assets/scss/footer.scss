@@ -8,29 +8,39 @@ footer{
 	bottom:0; 
 	background: #FFF;
 	z-index: 10000;
-	padding: $marginPage; 
+	padding: $marginSmall 0; 
+	// padding-bottom: 0;
 	&.row{margin:0;}
 	a{text-decoration:none;}
+	.lower-left-text{padding-left:$marginPage;}
 	.lower-right-text, .lower-left-text{
 		font-family: $titleFont;
 		font-weight: 100;
 		font-size: $mobileMenu;
 	}
-	.lower-right-text{
-		text-align: right;
+	.inner-footer{
+		margin:0;
 	}
-	.lower-left-text{
-		text-align: left;
+	.footer_right-part{
+		padding: 0;
+		padding-bottom: 3px;
 	}
+	// .lower-right-text{
+	// 	text-align: right;
+	// }
+	// .lower-left-text{
+	// 	text-align: left;
+	// }
 }
 
 .languages{
 	background: #FFF;
+	padding:0;
 	li{
 		font-family: $titleFont; 
 		text-transform: uppercase;
 		font-size: $desktopSmallSmall;
-		margin: $marginSmall 0;
+		// margin: $marginSmall 0;
 		&:not(.active){
 			display: none;
 			margin-left: 15px;
@@ -44,25 +54,87 @@ footer{
 		.select-btn{
 			cursor: pointer;
 			display:none;
+			margin-right: $marginSmall;
 		}
 	}
+}
+
+.widgets{
+	padding: 0;
+	.row{
+		margin:0;
+	}
+	ul > li{
+		margin-right: 5px;
+	}
+}
+
+// Icons
+.icon::before{
+	height: 1em;
+  width: 1em;
+  display: block;
+  text-align: center;
+  // line-height: 1.2em;
+  font-family: "fontawesome";
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.icon-mentions::before {
+  content: '\f29c';
+}
+
+.icon-light::before {
+    content: '\e800';
+}
+
+.icon-social::before {
+    content: '\e801';
 }
 
 // -------------- DESKTOP FOOTER --------------
 @media only screen and (min-width: 64em){
 	footer{
 		background: transparent;
+		padding:0;
+		& > .row{
+			margin:0;
+		}
+		.footer_right-part{
+			background: #FFF; 
+			padding:$marginPage $marginPage $marginPage 0;
+		}
 	}
-	.inner-footer{
-		position: relative;
+	.lower-left-text{
+		background: #FFF; 
+		padding: $marginPage;
+		line-height: 0.7;
 	}
+
+	// .inner-footer{
+	// 	position: relative;
+	// }
 	.lower-right-text{
-		text-align: left !important;
-		transform: rotate(-90deg);
-		width: 120px;
+		// transform: translate(20%, -100%);
 		position: absolute;
-		right: -$marginPage;
-		bottom: $marginPage;
+		right: 0;
+		bottom: 60px;
+		
+			transform: rotate(-90deg);
+			// margin:0;
+			width: 120px;
+		p{
+			// text-align: left !important;
+			// transform: rotate(-90deg);	
+			margin:0;
+			text-align: left !important;
+			// width: 120px;
+			 // transform-origin: right top;
+		}
+	}
+	.languages{
+		margin: 0 $marginNormal;
 	}
 }
 
