@@ -11,7 +11,8 @@ User settings for GUlp
  */
 module.exports.pluginScripts = [
   'node_modules/jquery/dist/jquery.js',
-  'assets/js/packery.pkgd.min.js'
+  'assets/js/packery.pkgd.min.js', 
+  'assets/js/isotope.pkgd.min.js'
 ];
 
 /* List all the Styles plugin files you are using in `pluginStyles`

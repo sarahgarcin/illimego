@@ -231,6 +231,39 @@ aside.projet_text-projet{
   main{
     padding-top: 0px; 
   }
+
+  .filters{
+    margin: $marginBig $marginNormal;
+    font-family: $titleFont;
+    font-size: $desktopSmallSmall;
+    text-transform: uppercase; 
+    li{
+      margin-bottom: $marginSmall/2;
+      cursor: pointer;
+      &::before{
+        content:"⦿";
+        margin-right: $marginSmall;
+      }
+      &.not-active::before{
+        content:"◯";
+      }
+    }
+  }
+
+  // PROJET
+  .projet_text-projet{
+    .see-more{
+      &.active{display:none;}
+    }
+    .projet_text{
+      max-height:0;
+      overflow: hidden;
+      transition: max-height 1s linear;
+      &.active{
+        max-height: 4000px;
+      } 
+    }
+  }
 }
 
 

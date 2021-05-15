@@ -36,6 +36,7 @@ footer{
 .languages{
 	background: #FFF;
 	padding:0;
+	pointer-events: auto;
 	li{
 		font-family: $titleFont; 
 		text-transform: uppercase;

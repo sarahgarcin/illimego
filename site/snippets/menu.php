@@ -5,6 +5,9 @@
 		<nav class="languages col-md-12 hide-for-small-only">
   		<?php snippet('languages')?>
 		</nav>
+		<?php if($page->intendedTemplate() == "projets"):?>
+			<?php snippet('categories')?>
+		<?php endif; ?>
 	</div>
 
 </header>

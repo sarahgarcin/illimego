@@ -1,7 +1,9 @@
 # Job log
 
 ## To do 
-- faire les filtres 
+- faire le système réseaux sociaux
+- améliorer le système de changer de langues
+- faire le système jour / nuit
 - version smarphone à peaufiner
 - version tablette ?
 - version grand ordi ?
@@ -28,6 +30,7 @@
 - rendre "ilimego" cliquable pour ouverture de menu 
 - config pour version anglaise 
 - footer : réseaux sociaux + page mentions légales etc.
+- filtres page projets ok
 
 
 

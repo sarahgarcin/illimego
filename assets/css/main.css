@@ -54,7 +54,8 @@ header {
   left: 0;
   top: 0;
   background: #FFF;
-  z-index: 10000; }
+  z-index: 10000;
+  pointer-events: none; }
   header.row {
     margin: 0; }
   header a {
@@ -74,7 +75,8 @@ header {
     font-weight: 100;
     font-size: 41px;
     margin: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    pointer-events: auto; }
   header .mobile-menu_logo {
     padding: 10px 20px 0 20px;
     width: 25%;
@@ -86,7 +88,8 @@ header {
     margin: 0px 20px;
     cursor: pointer;
     height: 24px;
-    width: 30px; }
+    width: 30px;
+    pointer-events: auto; }
     header .mobile-menu_btn span {
       display: block;
       background: #000;
@@ -191,6 +194,8 @@ header {
       transition: all 1s linear; }
     header .main-nav_submenu a.active {
       color: #000; }
+  header .header-right {
+    pointer-events: auto; }
 
 @media only screen and (min-width: 64em) {
   header {
@@ -222,11 +227,19 @@ header {
             content: "•";
             margin-right: 10px;
             margin-left: -20px; }
+        header .main-nav ul > li:hover {
+          font-weight: 500; }
+          header .main-nav ul > li:hover::before {
+            content: "•";
+            margin-right: 10px;
+            margin-left: -20px; }
     header .desktop-menu {
       padding: 0;
       width: 100%; }
       header .desktop-menu .desktop-menu_logo figure {
         width: 60px; }
+      header .desktop-menu .desktop-menu_logo a {
+        pointer-events: auto; }
       header .desktop-menu .desktop-menu_nav {
         padding-top: 10px; } }
 
@@ -286,7 +299,8 @@ footer {
 
 .languages {
   background: #FFF;
-  padding: 0; }
+  padding: 0;
+  pointer-events: auto; }
   .languages li {
     font-family: "Bw Gradual";
     text-transform: uppercase;
@@ -490,4 +504,27 @@ aside.projet_text-projet {
     display: -ms-flexbox;
     display: flex; }
   main {
-    padding-top: 0px; } }
+    padding-top: 0px; }
+  .filters {
+    margin: 40px 20px;
+    font-family: "Bw Gradual";
+    font-size: 0.75em;
+    text-transform: uppercase; }
+    .filters li {
+      margin-bottom: 5px;
+      cursor: pointer; }
+      .filters li::before {
+        content: "⦿";
+        margin-right: 10px; }
+      .filters li.not-active::before {
+        content: "◯"; }
+  .projet_text-projet .see-more.active {
+    display: none; }
+  .projet_text-projet .projet_text {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 1s linear;
+    -o-transition: max-height 1s linear;
+    transition: max-height 1s linear; }
+    .projet_text-projet .projet_text.active {
+      max-height: 4000px; } }

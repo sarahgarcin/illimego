@@ -56,6 +56,25 @@ function init(){
 		//   $grid.packery();
 		// });
 
+		var filters =[] ;
+
+		$('.filters > ul > li').each(function(i){
+			filters[i] = $(this).attr('data-filter');
+		})
+
+		$('.filters > ul > li').on( 'click', function() {
+			if($(this).hasClass('not-active')){
+				$(this).removeClass('not-active');
+				filters.push($(this).attr('data-filter'));
+			}
+			else{
+				$(this).addClass('not-active');
+				removeArray(filters, $(this).attr('data-filter'));
+			}
+		 $('.list-projects_template').isotope({ filter: filters.join(', ') });
+		});
+
+
 
 
 	//  -------------- actualités ---------------
@@ -72,6 +91,20 @@ function init(){
 		}	
 	});
 
+	//  -------------- projet ---------------
+	// déplier projet
+	$('.projet_text-projet .see-more').on('click', function(){
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$(this).parents('.projet_text-projet').find('.projet_text').removeClass('active');
+		}
+		else{
+			console.log($(this).parent());
+			$(this).addClass('active');
+			$(this).parents('.projet_text-projet').find('.projet_text').addClass('active');
+		}	
+	});
+
 	// select menu for footer
 	$('.select-btn').on('click', function(){
 		if($(this).hasClass('active')){
@@ -85,6 +118,17 @@ function init(){
 
 	});
 
+}
+
+function removeArray(arr) {
+  var what, a = arguments, L = a.length, ax;
+  while (L > 1 && arr.length) {
+      what = a[--L];
+      while ((ax= arr.indexOf(what)) !== -1) {
+          arr.splice(ax, 1);
+      }
+  }
+  return arr;
 }
 
 

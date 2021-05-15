@@ -8,6 +8,7 @@ header{
 	top:0; 
 	background: #FFF;
 	z-index: 10000; 
+	pointer-events: none;
 	&.row{margin:0;}
 	a{text-decoration:none;}
 	.mobile-menu{
@@ -21,6 +22,7 @@ header{
 		font-size: 41px;
 		margin:0;
 		cursor: pointer;
+		pointer-events: auto;
 	}
 	.mobile-menu_logo{
 		padding: $marginSmall $marginNormal 0 $marginNormal;
@@ -35,6 +37,7 @@ header{
 		cursor:pointer;
 		height:24px;
 		width: 30px;
+		pointer-events: auto;
 		span {
 		  display:block;
 		  background:#000;
@@ -139,6 +142,9 @@ header{
 		}
 		a.active{color:#000;}
 	}
+	.header-right{
+		pointer-events: auto;
+	}
 }
 
 
@@ -185,6 +191,14 @@ header{
 						margin-left: -20px;
 					}
 				}
+				&:hover{
+					font-weight: 500;
+					&::before{
+						content: "•";
+						margin-right: 10px;
+						margin-left: -20px;
+					}
+				}
 			}
 		}
 		.desktop-menu{
@@ -193,6 +207,7 @@ header{
 			.desktop-menu_logo{
 				// background: #FFF;
 				figure{width: 60px;}
+				a{pointer-events: auto;}
 			}
 			.desktop-menu_nav{
 				padding-top: $marginSmall;

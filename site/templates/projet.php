@@ -24,6 +24,9 @@
 		<aside class="projet_text-projet col-xs-12 col-md-3 hide-for-small-only">
 			<div class="projet_introduction-text">
 				<?= $page->summary()->kt()?>
+				<span class="see-more hide-for-small-only">
+					En savoir plus
+				</span>
 			</div>
 			<div class="projet_text">
 				<?= $page->text()->kt()?>
