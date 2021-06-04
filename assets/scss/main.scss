@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   font-size: $desktopTitle;
 }
 p{
@@ -55,7 +55,7 @@ figure.portrait{
 }
 
 main, aside{
-  padding-top: 100px; 
+  padding-top: 140px; 
 }
 
 .no-padding-top{
@@ -106,10 +106,14 @@ article.actualite{
 
 .see-more{
   text-transform: uppercase;
-  font-size: $desktopSmallSmall;
-  text-align: right;
+  font-weight: 500;
+  font-size: 0.8em;
+  text-align: left;
   font-family: $titleFont;
   cursor: pointer;
+  &:before{
+    content: ">";
+  }
   &:hover{
     font-weight: 500;
   }
@@ -120,6 +124,7 @@ aside.list-projects_text{
   li{
     font-family: $titleFont;
     font-weight: 300;
+    font-size: 1.2em;
     &:hover{
       font-weight: 500;
       &::before{
@@ -146,12 +151,20 @@ aside.projet_text-projet{
   padding-right:$marginBig;
 }
 
+.projet_introduction-text{
+  p{
+    font-size: $desktopSmallSmall+0.2em;
+  }
+}
+
 .projet_infos-text{
   margin-top: $marginBig;
   h2{
     text-transform: uppercase;
     font-size: $desktopSmallSmall;
     font-weight: normal;
+    font-weight: 500;
+    font-size: 0.8em;
   }
   p{
     font-size: $desktopSmallSmall;
@@ -178,6 +191,16 @@ aside.projet_text-projet{
   }
   p{
     font-size: $desktopSmallSmall;
+  }
+}
+.agence_text-inner_main{
+  h2{
+    text-transform: uppercase; 
+    font-weight: 500;
+    font-size: 0.8em;
+    margin-top: $marginNormal;
+    margin-bottom: $marginSmall;
+    & + p{margin-top:0;}
   }
 }
 
@@ -259,6 +282,14 @@ aside.projet_text-projet{
       max-height:0;
       overflow: hidden;
       transition: max-height 1s linear;
+      h2{
+        text-transform: uppercase; 
+        font-weight: 500;
+        font-size: 0.8em;
+        margin-top: $marginNormal;
+        margin-bottom: $marginSmall;
+        & + p{margin-top:0;}
+      }
       &.active{
         max-height: 4000px;
       } 

@@ -12,11 +12,14 @@ footer{
 	// padding-bottom: 0;
 	&.row{margin:0;}
 	a{text-decoration:none;}
-	.lower-left-text{padding-left:$marginPage;}
+	.lower-left-text{
+		padding-left:$marginPage; 
+		font-size: $desktopTitle;
+	}
+	.lower-right-text{font-size: 26px;}
 	.lower-right-text, .lower-left-text{
 		font-family: $titleFont;
-		font-weight: 100;
-		font-size: $mobileMenu;
+		font-weight: 100;	
 	}
 	.inner-footer{
 		margin:0;
@@ -124,7 +127,7 @@ footer{
 		
 			transform: rotate(-90deg);
 			// margin:0;
-			width: 120px;
+			width: 140px;
 		p{
 			// text-align: left !important;
 			// transform: rotate(-90deg);	

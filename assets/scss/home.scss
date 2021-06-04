@@ -1,6 +1,6 @@
 // -------------- MOBILE-FIRST HOME --------------
 .list-projects li{
-  margin-bottom: $marginNormal;
+  margin-bottom: 16px;
   padding-right: $marginSmall;
   padding-left: $marginSmall;
 }
@@ -22,6 +22,7 @@
 	.list-project_infos{
 		font-family: $titleFont;
 		font-size: $desktopSmallText;
+		line-height: 1.4;
 		opacity: 0; 
 		position: absolute;
 		bottom: 0;
@@ -38,7 +39,8 @@
 	.list-projects li:hover .list-project_infos{
 		// display: block !important;
 		opacity: 1;
-		background: rgba(255, 255, 255, 0.7); 
+		// max-height: 3000px;
+		background: rgba(255, 255, 255, 1); 
 	}
 
 }

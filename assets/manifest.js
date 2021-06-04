@@ -19,7 +19,7 @@ module.exports.pluginScripts = [
  * to define their loading order.
  */
 module.exports.pluginStyles = [
-  'node_modules/font-awesome/css/font-awesome.css'
+	'assets/css/flexboxgrid.min.css'
 ];
 
 /* List all your JavaScript file in `userScripts` to define

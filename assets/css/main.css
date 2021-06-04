@@ -38,8 +38,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-top: 0;
-  margin-bottom: 60px;
-  font-size: 32px; }
+  margin-bottom: 80px;
+  font-size: 40px; }
 
 p {
   margin: 20px 0; }
@@ -206,19 +206,19 @@ header {
       padding: 0; }
     header .mobile-menu_title h1 {
       margin-top: -10px;
-      font-size: 32px; }
+      font-size: 40px; }
     header .main-nav {
       margin-top: 0;
       padding: 0;
       margin-bottom: 40px;
       padding-left: 55px;
-      font-size: 1em; }
+      font-size: 1.1em; }
       header .main-nav ul > li {
-        font-size: 1em;
+        font-size: 1.1em;
         text-transform: inherit;
         text-align: left;
         border: none;
-        padding: 4px; }
+        padding: 4px 0px; }
         header .main-nav ul > li:last-child {
           border: none; }
         header .main-nav ul > li.active {
@@ -237,14 +237,14 @@ header {
       padding: 0;
       width: 100%; }
       header .desktop-menu .desktop-menu_logo figure {
-        width: 60px; }
+        width: 70px; }
       header .desktop-menu .desktop-menu_logo a {
         pointer-events: auto; }
       header .desktop-menu .desktop-menu_nav {
         padding-top: 10px; } }
 
 .list-projects li {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-right: 10px;
   padding-left: 10px; }
 
@@ -255,7 +255,8 @@ header {
     position: relative; }
   .list-project_infos {
     font-family: "Bw Gradual";
-    font-size: 0.9em;
+    font-size: 1em;
+    line-height: 1.4;
     opacity: 0;
     position: absolute;
     bottom: 0;
@@ -270,7 +271,7 @@ header {
       content: "—"; }
   .list-projects li:hover .list-project_infos {
     opacity: 1;
-    background: rgba(255, 255, 255, 0.7); } }
+    background: white; } }
 
 footer {
   width: 100%;
@@ -286,11 +287,13 @@ footer {
   footer a {
     text-decoration: none; }
   footer .lower-left-text {
-    padding-left: 28px; }
+    padding-left: 28px;
+    font-size: 40px; }
+  footer .lower-right-text {
+    font-size: 26px; }
   footer .lower-right-text, footer .lower-left-text {
     font-family: "Bw Gradual";
-    font-weight: 100;
-    font-size: 1.35em; }
+    font-weight: 100; }
   footer .inner-footer {
     margin: 0; }
   footer .footer_right-part {
@@ -304,7 +307,7 @@ footer {
   .languages li {
     font-family: "Bw Gradual";
     text-transform: uppercase;
-    font-size: 0.75em; }
+    font-size: 0.85em; }
     .languages li:not(.active) {
       display: none;
       margin-left: 15px; }
@@ -362,7 +365,7 @@ footer {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    width: 120px; }
+    width: 140px; }
     .lower-right-text p {
       margin: 0;
       text-align: left !important; }
@@ -376,7 +379,7 @@ footer {
   display: none; }
 
 main, aside {
-  padding-top: 100px; }
+  padding-top: 140px; }
 
 .no-padding-top {
   padding-top: 0; }
@@ -422,16 +425,20 @@ article.actualite {
 
 .see-more {
   text-transform: uppercase;
-  font-size: 0.75em;
-  text-align: right;
+  font-weight: 500;
+  font-size: 0.8em;
+  text-align: left;
   font-family: "Bw Gradual";
   cursor: pointer; }
+  .see-more:before {
+    content: ">"; }
   .see-more:hover {
     font-weight: 500; }
 
 aside.list-projects_text li {
   font-family: "Bw Gradual";
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 1.2em; }
   aside.list-projects_text li:hover {
     font-weight: 500; }
     aside.list-projects_text li:hover::before {
@@ -448,14 +455,19 @@ aside.list-projects_text li {
 aside.projet_text-projet {
   padding-right: 40px; }
 
+.projet_introduction-text p {
+  font-size: 1.05em; }
+
 .projet_infos-text {
   margin-top: 40px; }
   .projet_infos-text h2 {
     text-transform: uppercase;
-    font-size: 0.75em;
-    font-weight: normal; }
+    font-size: 0.85em;
+    font-weight: normal;
+    font-weight: 500;
+    font-size: 0.8em; }
   .projet_infos-text p {
-    font-size: 0.75em;
+    font-size: 0.85em;
     font-family: "IBM Plex Mono"; }
 
 .agence_text-inner_main p:first-child {
@@ -471,10 +483,19 @@ aside.projet_text-projet {
   margin-top: 40px; }
 
 .agence_text-inner_aside p {
-  font-size: 0.75em; }
+  font-size: 0.85em; }
+
+.agence_text-inner_main h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8em;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  .agence_text-inner_main h2 + p {
+    margin-top: 0; }
 
 .agence_equipe h2 {
-  font-size: 32px; }
+  font-size: 40px; }
 
 .agence_equipe li {
   margin-bottom: 40px; }
@@ -508,7 +529,7 @@ aside.projet_text-projet {
   .filters {
     margin: 40px 20px;
     font-family: "Bw Gradual";
-    font-size: 0.75em;
+    font-size: 0.85em;
     text-transform: uppercase; }
     .filters li {
       margin-bottom: 5px;
@@ -526,5 +547,13 @@ aside.projet_text-projet {
     -webkit-transition: max-height 1s linear;
     -o-transition: max-height 1s linear;
     transition: max-height 1s linear; }
+    .projet_text-projet .projet_text h2 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 0.8em;
+      margin-top: 20px;
+      margin-bottom: 10px; }
+      .projet_text-projet .projet_text h2 + p {
+        margin-top: 0; }
     .projet_text-projet .projet_text.active {
       max-height: 4000px; } }

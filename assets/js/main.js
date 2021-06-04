@@ -60,16 +60,18 @@ function init(){
 
 		$('.filters > ul > li').each(function(i){
 			filters[i] = $(this).attr('data-filter');
-		})
+		});
 
 		$('.filters > ul > li').on( 'click', function() {
 			if($(this).hasClass('not-active')){
 				$(this).removeClass('not-active');
 				filters.push($(this).attr('data-filter'));
+				console.log(filters);
 			}
 			else{
 				$(this).addClass('not-active');
 				removeArray(filters, $(this).attr('data-filter'));
+				console.log(filters);
 			}
 		 $('.list-projects_template').isotope({ filter: filters.join(', ') });
 		});

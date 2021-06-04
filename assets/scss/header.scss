@@ -181,7 +181,7 @@ header{
 				text-transform: inherit;
 				text-align: left;
 				border: none;
-				padding: 4px;
+				padding: 4px 0px;
 				&:last-child{border:none;}
 				&.active{
 					font-weight: 500;
@@ -206,7 +206,7 @@ header{
 			width: 100%;
 			.desktop-menu_logo{
 				// background: #FFF;
-				figure{width: 60px;}
+				figure{width: 70px;}
 				a{pointer-events: auto;}
 			}
 			.desktop-menu_nav{
