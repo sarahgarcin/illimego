@@ -12,6 +12,23 @@ body {
   font-family: "IBM Plex Serif";
   line-height: 1.22; }
 
+body.night {
+  background: #000;
+  color: #FFF; }
+  body.night .list-project_infos {
+    color: #000; }
+  body.night .list-projects_template .list-project_infos {
+    color: #FFF; }
+  body.night footer, body.night header .desktop-menu .desktop-menu_logo, body.night .languages, body.night header .nav {
+    background: #000; }
+  body.night p, body.night a, body.night li, body.night h1, body.night h2, body.night h3, body.night h4, body.night h5 {
+    color: #FFF; }
+  body.night header .mobile-menu_btn span {
+    background: #FFF; }
+  body.night .desktop-menu_logo figure {
+    -webkit-filter: invert(1);
+    filter: invert(1); }
+
 ul, ol {
   margin: 0;
   padding: 0; }
@@ -135,9 +152,9 @@ header {
     background: #FFF;
     padding-left: 5.5vw;
     width: 100%;
-    -webkit-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear; }
+    -webkit-transition: max-height 1s linear;
+    -o-transition: max-height 1s linear;
+    transition: max-height 1s linear; }
     header .nav.active {
       max-height: 100vh;
       overflow: auto; }
@@ -160,24 +177,12 @@ header {
       -webkit-transition: text-align 0.3s linear;
       -o-transition: text-align 0.3s linear;
       transition: text-align 0.3s linear; }
-      header .main-nav > ul > li a {
-        color: #000; }
-      header .main-nav > ul > li.active {
-        color: #000; }
-        header .main-nav > ul > li.active > span {
-          display: block;
-          text-align: left;
-          margin-bottom: 20px; }
+      header .main-nav > ul > li.active > span {
+        display: block;
+        text-align: left;
+        margin-bottom: 20px; }
       header .main-nav > ul > li:last-child {
         border-bottom: 1px solid #000; }
-  header .main-nav_first-level > li:hover, header .main-nav_first-level > li:hover > a {
-    color: #000; }
-    header .main-nav_first-level > li:hover::before, header .main-nav_first-level > li:hover > a::before {
-      color: #000; }
-  header .main-nav_first-level > li ul > li a {
-    color: #000; }
-  header .main-nav_first-level > li ul > li:hover, header .main-nav_first-level > li ul > li:hover a {
-    color: #000; }
   header .main-nav_submenu {
     max-height: 0;
     overflow: hidden;
@@ -410,10 +415,8 @@ footer {
     footer > .row {
       margin: 0; }
     footer .footer_right-part {
-      background: #FFF;
       padding: 0; }
   .lower-left-text {
-    background: #FFF;
     padding: 0;
     padding-left: 0px;
     line-height: 0.7; }
@@ -508,10 +511,13 @@ aside.list-projects_text li {
 
 .list-projects_template {
   margin: 0; }
+  .list-projects_template li:hover .list-project_infos {
+    background: transparent; }
   .list-projects_template .list-project_infos {
     position: relative;
     opacity: 1;
-    padding-left: 0; }
+    padding-left: 0;
+    background: transparent; }
 
 .projet_images-gallery figure {
   margin-bottom: 20px; }

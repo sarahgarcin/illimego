@@ -38,12 +38,13 @@ Page agence :
 - ok - ajouter une lightbox
 - ok - améliorer le système pour changer de langues
 - faire le système jour / nuit
+- précédent / suivant
 - version smarphone à peaufiner
 - version tablette ?
 - version grand ordi ?
 
 ## Questions
-- qu'est ce qui peut apparaître sur la page d'accueil ? Si il y a les actualités, qu'est ce que ça affiche comme légende ? peut-être il faut juste mettre les pages projets non ? 
+- mode nuit -> logo nuit ? 
 
 
 ## Log

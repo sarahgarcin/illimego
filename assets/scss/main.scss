@@ -15,6 +15,36 @@ body{
   line-height: 1.22;
 }
 
+// night mode
+body.night{
+  background: #000;
+  color: #FFF;
+  .list-project_infos{
+    color: #000;
+  }
+  .list-projects_template .list-project_infos{
+  //   background: #000;
+    color: #FFF;
+  }
+  // .list-projects li:hover .list-project_infos{
+  //   background: #000;
+  // }
+  footer, header .desktop-menu .desktop-menu_logo, .languages, header .nav{
+    background: #000;
+  }
+  p, a, li, h1, h2, h3, h4, h5{
+    color: #FFF;
+  }
+  header .mobile-menu_btn span{
+    background: #FFF;
+  }
+  .desktop-menu_logo{
+    figure{
+      filter: invert(1);
+    }
+  }
+}
+
 // pour le dev
 // .grid{
 //   position: fixed;
@@ -181,10 +211,14 @@ aside.list-projects_text{
 
 .list-projects_template{
   margin:0;
+  li:hover .list-project_infos{
+    background: transparent;
+  }
   .list-project_infos{
     position: relative;
     opacity: 1; 
     padding-left: 0;
+    background: transparent;
   }
 }
 

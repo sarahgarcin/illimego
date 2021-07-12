@@ -61,7 +61,7 @@ header{
 		// margin:0;
 		padding-left: 5.5vw;
 		width: 100%;
-		transition: all 1s linear;
+		transition: max-height 1s linear;
 		&.active{
 			max-height: 100vh; 
 			overflow: auto;
@@ -84,9 +84,9 @@ header{
 			padding-bottom: $marginSmall;
 			text-transform: uppercase;
 			transition: text-align 0.3s linear;
-			a{color: $mainColor;}
+			// a{color: $mainColor;}
 			&.active{
-				color: #000;
+				// color: #000;
 				& > span{
 					display: block;
 					text-align: left;
@@ -98,20 +98,20 @@ header{
 			}			
 		}
 	}
-	.main-nav_first-level{
-		& > li{
-			&:hover, &:hover > a{
-				color: #000;
-				&::before{color: #000;}
-			}
-			ul > li{
-				a{color: $mainColor;}
-				&:hover, &:hover a{
-					color: #000;
-				}
-			}
-		}
-	}
+	// .main-nav_first-level{
+	// 	& > li{
+	// 		&:hover, &:hover > a{
+	// 			color: #000;
+	// 			&::before{color: #000;}
+	// 		}
+	// 		ul > li{
+	// 			// a{color: $mainColor;}
+	// 			// &:hover, &:hover a{
+	// 			// 	color: #000;
+	// 			// }
+	// 		}
+	// 	}
+	// }
 	.main-nav_submenu{ 
 		max-height:0;
 		overflow: hidden; 

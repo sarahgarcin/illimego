@@ -43,8 +43,74 @@ function init(){
 
 	});
 
-	// Initialiser la lightbox sur les images
-	
+	// Get parameter from url to know on wich mode we are
+	// const queryString = window.location.search;
+	// const urlParams = new URLSearchParams(queryString);
+	// if(urlParams.has('night')){
+	// 	const night = urlParams.get('night');
+	// 	if(night){
+	// 		$('body').addClass('night');
+	// 	}
+	// 	else{
+	// 		$('body').removeClass('night');
+	// 	}
+	// }
+
+
+	// Night and day button
+	// Toogle night and day
+	$('.toogle-light').on("click",function(){
+		if($('body').hasClass('night')){
+			$('body').removeClass('night');
+			setCookie('night', 'false', 1);
+		}
+		else{
+			$('body').addClass('night');
+			setCookie('night', 'true', 1);
+		}
+	});
+
+	var night = getCookie('night');
+	if(night == 'true'){
+		$('body').addClass('night');
+	}
+	else{
+		$('body').removeClass('night');
+	}
+
+	// function toogleMode(night){
+	// 	console.log(night);
+	// 	if(night == true){
+	// 		$('body').addClass('night');
+	// 	}
+	// 	else{
+	// 		$('body').removeClass('night');
+	// 	}
+	// }
+	// toogleMode(getCookie('night'));
+
+	function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+	}
+	function getCookie(name) {
+	    var nameEQ = name + "=";
+	    var ca = document.cookie.split(';');
+	    for(var i=0;i < ca.length;i++) {
+	        var c = ca[i];
+	        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	    }
+	    return null;
+	}
+	function eraseCookie(name) {   
+	    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	}
 
 	// --------------  HOME -------------- 
 	// Packery
@@ -154,6 +220,12 @@ function removeArray(arr) {
   return arr;
 }
 
+function insertParam(key,value) {
+    if (history.pushState) {
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' +key+'='+value;
+        window.history.pushState({path:newurl},'',newurl);
+    }
+  }
 
 
 
