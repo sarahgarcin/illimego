@@ -537,6 +537,12 @@ aside.list-projects_text li {
     font-size: 0.85em;
     font-family: "IBM Plex Mono"; }
 
+.prev_nex-nav {
+  text-align: center; }
+  .prev_nex-nav a {
+    padding-left: 10px;
+    padding-right: 10px; }
+
 .chapeau p {
   font-size: 1.05em; }
 

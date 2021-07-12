@@ -72,6 +72,18 @@
 					<?= $page->infos()->kt()?>
 				</div>
 			<?php endif;?>
+
+			<div class="prev_nex-nav hide-for-small-only">
+				<?php if ($projets->isNotEmpty()) : ?>
+				  <?php if ($prevPage = $page->getPrev($projets)) : ?>
+				      <a href="<?= $prevPage->url() ?>">← Précédant</a>
+				  <?php endif ?>
+
+				  <?php if ($nextPage = $page->getNext($projets)) : ?>
+				      <a href="<?= $nextPage->url() ?>">Suivant →</a>
+				  <?php endif ?>
+				<?php endif ?>			
+			</div>
 			
 		</main>
 	</div>

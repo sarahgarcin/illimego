@@ -37,14 +37,14 @@ Page agence :
 - ilimelgo trop proche du menu 
 - ok - ajouter une lightbox
 - ok - améliorer le système pour changer de langues
-- faire le système jour / nuit
+- ok - faire le système jour / nuit
 - précédent / suivant
 - version smarphone à peaufiner
 - version tablette ?
 - version grand ordi ?
+- cookie ? RGPD -- 
 
 ## Questions
-- mode nuit -> logo nuit ? 
 
 
 ## Log
