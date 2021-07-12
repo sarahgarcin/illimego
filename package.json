@@ -29,5 +29,7 @@
     "jshint": "^2.11.0",
     "popper.js": "^1.16.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "photoswipe": "^4.1.3"
+  }
 }

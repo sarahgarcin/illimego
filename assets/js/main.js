@@ -43,12 +43,15 @@ function init(){
 
 	});
 
+	// Initialiser la lightbox sur les images
+	
+
 	// --------------  HOME -------------- 
 	// Packery
 		// init Packery
 		var $grid = $('.list-projects').packery({
 		  itemSelector: 'li',
-	  	gutter: 0
+	  	gutter: 20
 		});
 		$grid.packery();
 		// layout Packery after each image loads
@@ -73,7 +76,13 @@ function init(){
 				removeArray(filters, $(this).attr('data-filter'));
 				console.log(filters);
 			}
-		 $('.list-projects_template').isotope({ filter: filters.join(', ') });
+		 $('.list-projects_template').isotope({ 
+		 		filter: filters.join(', '), 
+		 		transitionDuration: 200,
+			 	masonry: {
+	    		gutter: 20
+	  		}
+  		});
 		});
 
 
@@ -118,6 +127,18 @@ function init(){
 			$(this).addClass('active').html('▲');
 		}
 
+	});
+
+	// footer open social media menu
+	$('.social .icon-social').on('click', function(){
+		var $sn = $('.social .list-social-networks');
+		if($sn.hasClass('active')){
+			$sn.css('display', 'none').removeClass('active');
+		}
+		else{
+			$sn.css('display', 'block').addClass('active');
+		}
+		
 	});
 
 }

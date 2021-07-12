@@ -1,6 +1,6 @@
-<div class="nav row col-md-12">
+<div class="nav row col-md-15">
 	<!-- Mobile nav -->
-	<nav class="main-nav main-nav_mobile col-xs-12 show-for-small-only">
+	<nav class="main-nav main-nav_mobile col-xs-15 show-for-small-only">
 		<ul class="main-nav_first-level">
 			<?php foreach($pages->listed() as $p): ?>
 				<li class="<?= r($p->isOpen(), 'active') ?>">
@@ -38,7 +38,7 @@
 	</nav>
 	
 	<!-- Desktop nav -->
-	<nav class="main-nav main-nav_desktop col-xs-12 hide-for-small-only">
+	<nav class="main-nav main-nav_desktop col-xs-15 hide-for-small-only">
 		<ul class="main-nav_first-level">
 			<?php foreach($pages->listed() as $p): ?>
 				<li class="<?= r($p->isOpen(), 'active') ?>">

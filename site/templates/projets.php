@@ -3,7 +3,7 @@
 <?php $projects = $kirby->collection("projets");?>
 
 <div class="row">
-	<aside class="list-projects_text col-xs-12 col-md-3">
+	<aside class="list-projects_text col-xs-15 col-md-4">
 			<ul>
 		 <?php foreach ($projects as $project): ?>
 		 		<li>
@@ -14,11 +14,11 @@
 		 <?php endforeach?>	
 		 </ul>
 	</aside>
-	<main class="col-xs-12 col-md-6">
+	<main class="col-xs-15 col-md-8">
 		<h1><?= $page->title()->html()?></h1>
 		<ul class="list-projects list-projects_template row">
 		  <?php foreach ($projects as $project): ?>
-		  	<li class="col-xs-12 col-sm-6 <?php echo $project->parent()->uid()?>">
+		  	<li class="col-xs-15 col-sm-75 <?php echo $project->parent()->uid()?>">
 		  		<a href="<?= $project->url()?>" title="<?= $project->title()?>">
 			  		<div class="list-project_thumbs">
 			  			<?php $image = $project->cover()->toFile() ?>

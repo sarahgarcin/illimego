@@ -13,10 +13,9 @@ footer{
 	&.row{margin:0;}
 	a{text-decoration:none;}
 	.lower-left-text{
-		padding-left:$marginPage; 
 		font-size: $desktopTitle;
 	}
-	.lower-right-text{font-size: 26px;}
+	.lower-right-text{font-size: 28px;}
 	.lower-right-text, .lower-left-text{
 		font-family: $titleFont;
 		font-weight: 100;	
@@ -58,7 +57,7 @@ footer{
 		.select-btn{
 			cursor: pointer;
 			display:none;
-			margin-right: $marginSmall;
+			margin-right: 15px;;
 		}
 	}
 }
@@ -73,16 +72,29 @@ footer{
 	}
 }
 
+.social{
+	position: relative;
+	.list-social-networks{
+		position: absolute;
+		bottom: 100%;
+		display:none;
+		li{
+			margin-bottom: $marginSmall;
+		}
+	}
+}
+
+
 // Icons
 .icon::before{
 	height: 1em;
   width: 1em;
   display: block;
   text-align: center;
-  // line-height: 1.2em;
   font-family: "fontawesome";
   font-size: 1em;
   font-weight: normal;
+  cursor: pointer;
 }
 
 .icon-mentions::before {
@@ -97,22 +109,47 @@ footer{
     content: '\e801';
 }
 
+.icon-facebook::before {
+    content: '\f09a';
+}
+
+.icon-vimeo::before {
+    content: '\f27d';
+}
+
+.icon-linkedin::before {
+    content: '\f0e1';
+}
+
+.icon-instagram::before {
+    content: '\f16d';
+}
+
+.icon-youtube::before {
+    content: '\f167';
+}
+
+.icon-twitter::before {
+    content: '\f099';
+}
+
 // -------------- DESKTOP FOOTER --------------
 @media only screen and (min-width: 64em){
 	footer{
-		background: transparent;
-		padding:0;
+		background: #FFF;
+		padding:$marginPage;
 		& > .row{
 			margin:0;
 		}
 		.footer_right-part{
 			background: #FFF; 
-			padding:$marginPage $marginPage $marginPage 0;
+			padding:0;
 		}
 	}
 	.lower-left-text{
 		background: #FFF; 
-		padding: $marginPage;
+		padding:0;
+		padding-left:0px;
 		line-height: 0.7;
 	}
 
@@ -122,8 +159,8 @@ footer{
 	.lower-right-text{
 		// transform: translate(20%, -100%);
 		position: absolute;
-		right: 0;
-		bottom: 60px;
+		right: -15px;
+		bottom: 63px;
 		
 			transform: rotate(-90deg);
 			// margin:0;
@@ -138,7 +175,7 @@ footer{
 		}
 	}
 	.languages{
-		margin: 0 $marginNormal;
+		// margin-top:-10px;
 	}
 }
 

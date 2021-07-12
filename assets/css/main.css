@@ -47,6 +47,16 @@ p {
 figure.portrait {
   width: 70%; }
 
+figcaption p {
+  margin: 5px 0px 20px 0px;
+  font-size: 0.7em;
+  color: #535353; }
+
+.pswp {
+  z-index: 12000; }
+  .pswp .pswp__caption__center {
+    text-align: center; }
+
 header {
   width: 100%;
   max-width: 100%;
@@ -85,16 +95,16 @@ header {
   header .mobile-menu_btn {
     display: block;
     position: relative;
-    margin: 0px 20px;
+    margin: 7px 10px 0 0;
     cursor: pointer;
     height: 24px;
-    width: 30px;
+    width: 20px;
     pointer-events: auto; }
     header .mobile-menu_btn span {
       display: block;
       background: #000;
       height: 1px;
-      width: 30px;
+      width: 20px;
       position: absolute;
       -webkit-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
@@ -108,16 +118,17 @@ header {
     header .mobile-menu_btn .transparent {
       opacity: 0; }
     header .mobile-menu_btn .rotate-top {
-      -webkit-transform: rotatez(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotatez(45deg);
+      -webkit-transform: rotatez(50deg);
+      -ms-transform: rotate(50deg);
+      transform: rotatez(50deg);
       -webkit-transform-origin: 0%;
       left: 2px; }
     header .mobile-menu_btn .rotate-bottom {
-      -webkit-transform: rotatez(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotatez(-45deg);
-      -webkit-transform-origin: 15%; }
+      -webkit-transform: rotatez(-50deg);
+      -ms-transform: rotate(-50deg);
+      transform: rotatez(-50deg);
+      -webkit-transform-origin: 15%;
+      top: 13px !important; }
   header .nav {
     max-height: 0;
     overflow: hidden;
@@ -195,23 +206,32 @@ header {
     header .main-nav_submenu a.active {
       color: #000; }
   header .header-right {
-    pointer-events: auto; }
+    pointer-events: auto;
+    padding: 0; }
 
 @media only screen and (min-width: 64em) {
   header {
-    position: fixed;
+    position: absolute;
     padding: 28px;
     background: transparent; }
     header .nav {
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
     header .mobile-menu_title h1 {
       margin-top: -10px;
       font-size: 40px; }
+    header .header-right {
+      position: fixed;
+      right: 28px;
+      top: 90px;
+      margin: 0;
+      width: 100%;
+      padding-left: 0.6rem; }
     header .main-nav {
-      margin-top: 0;
+      margin-top: -5px;
       padding: 0;
-      margin-bottom: 40px;
-      padding-left: 55px;
+      margin-bottom: 80px;
+      padding-left: 32px;
       font-size: 1.1em; }
       header .main-nav ul > li {
         font-size: 1.1em;
@@ -225,32 +245,39 @@ header {
           font-weight: 500; }
           header .main-nav ul > li.active::before {
             content: "•";
-            margin-right: 10px;
-            margin-left: -20px; }
+            margin-right: 20px;
+            margin-left: -32px; }
         header .main-nav ul > li:hover {
           font-weight: 500; }
           header .main-nav ul > li:hover::before {
             content: "•";
-            margin-right: 10px;
-            margin-left: -20px; }
+            margin-right: 20px;
+            margin-left: -32px; }
     header .desktop-menu {
       padding: 0;
-      width: 100%; }
-      header .desktop-menu .desktop-menu_logo figure {
-        width: 70px; }
-      header .desktop-menu .desktop-menu_logo a {
-        pointer-events: auto; }
+      width: 100%;
+      margin: 0; }
+      header .desktop-menu .desktop-menu_logo {
+        padding: 0px;
+        background: #FFF; }
+        header .desktop-menu .desktop-menu_logo figure {
+          width: 70px; }
+        header .desktop-menu .desktop-menu_logo a {
+          pointer-events: auto; }
       header .desktop-menu .desktop-menu_nav {
-        padding-top: 10px; } }
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        left: calc(86.667% - 28px + 10px); } }
 
 .list-projects li {
-  margin-bottom: 16px;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding: 0; }
 
 @media only screen and (min-width: 64em) {
+  .list-projects li {
+    width: calc(50% - 1rem); }
   .list-projects_selected li {
-    width: 45%; }
+    width: calc(50% - 2rem); }
   .list-projects li {
     position: relative; }
   .list-project_infos {
@@ -260,7 +287,7 @@ header {
     opacity: 0;
     position: absolute;
     bottom: 0;
-    left: 10px;
+    left: 0;
     right: 0;
     background: #FFF;
     padding: 10px;
@@ -287,10 +314,9 @@ footer {
   footer a {
     text-decoration: none; }
   footer .lower-left-text {
-    padding-left: 28px;
     font-size: 40px; }
   footer .lower-right-text {
-    font-size: 26px; }
+    font-size: 28px; }
   footer .lower-right-text, footer .lower-left-text {
     font-family: "Bw Gradual";
     font-weight: 100; }
@@ -318,7 +344,7 @@ footer {
     .languages li .select-btn {
       cursor: pointer;
       display: none;
-      margin-right: 10px; }
+      margin-right: 15px; }
 
 .widgets {
   padding: 0; }
@@ -327,6 +353,15 @@ footer {
   .widgets ul > li {
     margin-right: 5px; }
 
+.social {
+  position: relative; }
+  .social .list-social-networks {
+    position: absolute;
+    bottom: 100%;
+    display: none; }
+    .social .list-social-networks li {
+      margin-bottom: 10px; }
+
 .icon::before {
   height: 1em;
   width: 1em;
@@ -334,7 +369,8 @@ footer {
   text-align: center;
   font-family: "fontawesome";
   font-size: 1em;
-  font-weight: normal; }
+  font-weight: normal;
+  cursor: pointer; }
 
 .icon-mentions::before {
   content: '\f29c'; }
@@ -345,32 +381,49 @@ footer {
 .icon-social::before {
   content: '\e801'; }
 
+.icon-facebook::before {
+  content: '\f09a'; }
+
+.icon-vimeo::before {
+  content: '\f27d'; }
+
+.icon-linkedin::before {
+  content: '\f0e1'; }
+
+.icon-instagram::before {
+  content: '\f16d'; }
+
+.icon-youtube::before {
+  content: '\f167'; }
+
+.icon-twitter::before {
+  content: '\f099'; }
+
 @media only screen and (min-width: 64em) {
   footer {
-    background: transparent;
-    padding: 0; }
+    background: #FFF;
+    padding: 28px; }
     footer > .row {
       margin: 0; }
     footer .footer_right-part {
       background: #FFF;
-      padding: 28px 28px 28px 0; }
+      padding: 0; }
   .lower-left-text {
     background: #FFF;
-    padding: 28px;
+    padding: 0;
+    padding-left: 0px;
     line-height: 0.7; }
   .lower-right-text {
     position: absolute;
-    right: 0;
-    bottom: 60px;
+    right: -15px;
+    bottom: 63px;
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     width: 140px; }
     .lower-right-text p {
       margin: 0;
-      text-align: left !important; }
-  .languages {
-    margin: 0 20px; } }
+      text-align: left !important; } }
 
 .show-for-small-only {
   display: block; }
@@ -379,7 +432,10 @@ footer {
   display: none; }
 
 main, aside {
-  padding-top: 140px; }
+  padding-top: 128px; }
+
+aside p:first-child {
+  margin-top: 0; }
 
 .no-padding-top {
   padding-top: 0; }
@@ -409,6 +465,8 @@ main, aside {
 
 article.actualite {
   margin-bottom: 80px; }
+  article.actualite .see-more.active {
+    display: none; }
 
 .actualite_title {
   margin-bottom: 20px;
@@ -444,16 +502,15 @@ aside.list-projects_text li {
     aside.list-projects_text li:hover::before {
       content: "–"; }
 
-.list-projects_template .list-project_infos {
-  position: relative;
-  opacity: 1;
-  padding-left: 0; }
+.list-projects_template {
+  margin: 0; }
+  .list-projects_template .list-project_infos {
+    position: relative;
+    opacity: 1;
+    padding-left: 0; }
 
 .projet_images-gallery figure {
   margin-bottom: 20px; }
-
-aside.projet_text-projet {
-  padding-right: 40px; }
 
 .projet_introduction-text p {
   font-size: 1.05em; }
@@ -469,6 +526,9 @@ aside.projet_text-projet {
   .projet_infos-text p {
     font-size: 0.85em;
     font-family: "IBM Plex Mono"; }
+
+.chapeau p {
+  font-size: 1.05em; }
 
 .agence_text-inner_main p:first-child {
   margin-top: 0px; }
@@ -527,7 +587,7 @@ aside.projet_text-projet {
   main {
     padding-top: 0px; }
   .filters {
-    margin: 40px 20px;
+    margin: 50px 0;
     font-family: "Bw Gradual";
     font-size: 0.85em;
     text-transform: uppercase; }
@@ -536,9 +596,20 @@ aside.projet_text-projet {
       cursor: pointer; }
       .filters li::before {
         content: "⦿";
-        margin-right: 10px; }
+        margin-right: 15px; }
       .filters li.not-active::before {
         content: "◯"; }
+  .list-projects_template li {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    -webkit-transition: -webkit-filter 1s linear;
+    transition: -webkit-filter 1s linear;
+    -o-transition: filter 1s linear;
+    transition: filter 1s linear;
+    transition: filter 1s linear, -webkit-filter 1s linear; }
+    .list-projects_template li:hover {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); }
   .projet_text-projet .see-more.active {
     display: none; }
   .projet_text-projet .projet_text {

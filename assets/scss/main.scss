@@ -15,6 +15,28 @@ body{
   line-height: 1.22;
 }
 
+// pour le dev
+// .grid{
+//   position: fixed;
+//   top:0;
+//   left:0;
+//   height: calc(100vh - (#{$marginPage}*2));
+//   width:100%;
+//   margin:0;
+//   padding: $marginPage;
+//   z-index:10000;
+//   > div{
+//      height: calc(100vh - (#{$marginPage}*2));
+//     border-right: 1px solid pink;
+//   }
+// }
+
+// main{
+//   border: 1px solid purple;
+// }
+// fin pour le dev
+
+
 // -------------- RESET.CSS --------------
 ul, ol{margin:0; padding:0;}
 li{list-style:none;}
@@ -39,6 +61,22 @@ figure.portrait{
   width: 70%;
 }
 
+figcaption{
+  p{
+    margin:5px 0px $marginNormal 0px;
+    font-size: 0.7em;
+    color: #535353;
+  }
+}
+
+.pswp{
+  z-index: 12000;
+  .pswp__caption__center{
+    text-align: center;
+  }
+}
+
+
 // -------------- IMPORT TEMPlATES STYLES --------------
 @import "header.scss";
 @import "home.scss";
@@ -55,7 +93,11 @@ figure.portrait{
 }
 
 main, aside{
-  padding-top: 140px; 
+  padding-top: 128px; 
+}
+
+aside p:first-child{
+  margin-top:0;
 }
 
 .no-padding-top{
@@ -86,6 +128,9 @@ main, aside{
 
 article.actualite{
   margin-bottom: $marginBig*2;
+  .see-more{
+    &.active{display:none;}
+  }
 }
 
 .actualite_title{
@@ -135,6 +180,7 @@ aside.list-projects_text{
 }
 
 .list-projects_template{
+  margin:0;
   .list-project_infos{
     position: relative;
     opacity: 1; 
@@ -145,10 +191,6 @@ aside.list-projects_text{
 // PROJET
 .projet_images-gallery{
   figure{margin-bottom: $marginNormal;}
-}
-
-aside.projet_text-projet{
-  padding-right:$marginBig;
 }
 
 .projet_introduction-text{
@@ -173,6 +215,12 @@ aside.projet_text-projet{
 }
 
 // Agence
+.chapeau{
+  p{
+    font-size: $desktopSmallSmall+0.2em;
+  }
+}
+
 .agence_text-inner_main{
   p:first-child{
     margin-top: 0px;
@@ -256,7 +304,7 @@ aside.projet_text-projet{
   }
 
   .filters{
-    margin: $marginBig $marginNormal;
+    margin: 50px 0;
     font-family: $titleFont;
     font-size: $desktopSmallSmall;
     text-transform: uppercase; 
@@ -265,13 +313,26 @@ aside.projet_text-projet{
       cursor: pointer;
       &::before{
         content:"⦿";
-        margin-right: $marginSmall;
+        margin-right: 15px;
       }
       &.not-active::before{
         content:"◯";
       }
     }
   }
+
+  // PROJETS
+  // noir et blanc sur les images
+  .list-projects_template{
+    li{
+      filter: grayscale(1);
+      transition: filter 1s linear;
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
+  }
+
 
   // PROJET
   .projet_text-projet{

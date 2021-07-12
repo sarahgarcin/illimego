@@ -9,9 +9,11 @@
   <meta name="author" content="<?php echo $site->author()->html() ?>">
 
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
-  <?php echo css('assets/css/flexboxgrid.min.css') ?>
+
   <?php
     if ( option('environment') == 'local' ) :
+      echo css('assets/css/flexboxgrid.css'); 
+      echo css('assets/css/halkaBox.min.css');
       foreach ( option('julien-gargot.assets.styles', array()) as $style):
         echo css($style.'?version='.md5(uniqid(rand(), true)));
       endforeach;

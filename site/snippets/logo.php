@@ -19,7 +19,7 @@
 
 <!-- DESKTOP LOGO -->
 <div class="desktop-menu hide-for-small-only row between-md">
-	<div class="desktop-menu_logo col-md-3">
+	<div class="desktop-menu_logo col-md-4">
 		<a href="<?= $site->url()?>" title="<?= $site->title()?>">
 			<?php if($image = $site->logo()->toFile()): ?>
 				<figure>
@@ -28,7 +28,7 @@
 			<?php endif;?>
 		</a>
 	</div>
-	<div class="desktop-menu_nav col-md-3 row end-md">
+	<div class="desktop-menu_nav col-md-2 col-md-offset-1 row">
 		<div class="mobile-menu_btn">
 			<span></span>
 			<span></span>
@@ -39,4 +39,23 @@
 		</div>
 	</div>
 	
+</div>
+
+
+<div class="grid row">
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>	
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>	
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>	
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
+	<div class="col-xs-1"></div>
 </div>

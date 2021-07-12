@@ -7,14 +7,14 @@
 <!--  hide-for-small-only -->
 <footer>
   <div class="inner-footer row bottom-xs">
-    <div class="lower-left-text col-xs-6 col-md-3">
+    <div class="lower-left-text col-xs-6 col-md-4">
       <?= $site->lefttext()?>
     </div>
-    <div class="footer_right-part col-xs-6 col-md-2 col-md-offset-7 row bottom-xs">
+    <div class="footer_right-part col-xs-6 col-md-2 col-md-offset-9 row bottom-xs">
       <nav class="languages col-xs-7 show-for-small-only">
         <?php snippet('languages')?>
       </nav>
-      <div class="widgets col-xs-5 col-md-6">
+      <div class="widgets col-xs-5 col-md-75">
         <ul class="row between-xs">
           <li class="mentions">
             <a href="<?= $site->find('mentions-legales')->url()?>" title="<?= $site->find('mentions-legales')->title()?>">
@@ -26,6 +26,11 @@
           </li>
           <li class="social">
             <span title="social-networks" class="icon icon-social"></span>
+            <ul class="list-social-networks">
+              <?php foreach($site->socialnetworks()->toStructure() as $social):?>
+                <li><a href="<?php echo $social->link()?>" title="<?php echo $social->title()?>" target="_blank"><span title="social-icon" class="icon <?php echo $social->title()?>"></span></a></li>
+              <?php endforeach ?>
+            </ul>
           </li>
         </ul>
       </div>

@@ -12,14 +12,18 @@ User settings for GUlp
 module.exports.pluginScripts = [
   'node_modules/jquery/dist/jquery.js',
   'assets/js/packery.pkgd.min.js', 
-  'assets/js/isotope.pkgd.min.js'
+  'assets/js/isotope.pkgd.min.js',
+  'node_modules/photoswipe/dist/photoswipe.min.js', 
+  'node_modules/photoswipe/dist/photoswipe-ui-default.min.js'
 ];
 
 /* List all the Styles plugin files you are using in `pluginStyles`
  * to define their loading order.
  */
 module.exports.pluginStyles = [
-	'assets/css/flexboxgrid.min.css'
+	'assets/css/flexboxgrid.css',
+	'node_modules/photoswipe/dist/photoswipe.css', 
+  'node_modules/photoswipe/dist/default-skin/default-skin.css'
 ];
 
 /* List all your JavaScript file in `userScripts` to define

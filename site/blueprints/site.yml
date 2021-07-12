@@ -33,6 +33,17 @@ tabs:
             label: Image pour les réseaux sociaux
             type: files
             multiple: false
+          socialnetworks:
+            label: Vos Réseaux Sociaux
+            type:  structure
+            fields:
+              title:
+                label: Icône
+                type:  text
+                help: Pour twitter, taper "icon-twitter". Pour facebook, taper "icon-facebook" Pour instagram, taper "icon-instagram". Pour vimeo, taper "icon-vimeo". Pour linkedin, taper "icon-linkedin". Pour youtube, taper "icon-youtube".
+              link:
+                label: Lien
+                type:  url
           lefttext: 
             label: Texte coin inférieur gauche
             type: text

@@ -21,7 +21,7 @@
 	<!-- fin MOBILE -->
 	<div class="row">
 		<!-- seulement pour DESKTOP -->
-		<aside class="projet_text-projet col-xs-12 col-md-3 hide-for-small-only">
+		<aside class="projet_text-projet col-xs-15 col-md-4 hide-for-small-only">
 			<div class="projet_introduction-text">
 				<?= $page->summary()->kt()?>
 				<span class="see-more hide-for-small-only">
@@ -39,21 +39,26 @@
 			<?php endif;?>
 		</aside>
 		<!-- fin DESKTOP -->
-		<main class="col-xs-12 col-md-6">
+		<main class="col-xs-15 col-md-8">
 			<h1><?= $page->title()?></h1>
 			<div class="projet_introduction-text show-for-small-only">
 				<?= $page->summary()->kt()?>
 			</div>
 			<?php if($page->hasImages()):?>
-				<ul class="projet_images-gallery">
+				<ul class="projet_images-gallery photoswipe" itemscope itemtype="http://schema.org/ImageGallery">
 					<?php foreach($page->images() as $image):?>
 						<?php if($image->isPortrait()):?>
 							<?php $imageClass = "portrait"?>
 						<?php else:?>
 							<?php $imageClass = "landscape"?>
 						<?php endif?>
-						<figure class="<?= $imageClass?>">
-		  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
+						<figure class="<?= $imageClass?>" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-image="<?= $image->thumb(['width'=> 300, 'quality' => 80])->url(); ?>">
+							<a href="<?= $image->url() ?>" class="gallery" title="<?= $image->caption() ?>" itemprop="contentUrl" data-size="<?= $image->width(); ?>x<?= $image->height(); ?>">
+		  					<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" alt="<?= $image->alt() ?>" itemprop="thumbnail"/>
+		  				</a>
+		  				<?php if($image->caption()->isNotEmpty()):?>
+								<figcaption itemprop="caption description"><?= $image->caption()->kt()?></figcaption>
+							<?php endif; ?>
 		  			</figure>
 					<?php endforeach ?>
 				</ul>
@@ -71,4 +76,5 @@
 		</main>
 	</div>
 
+<?php snippet('photoswipe'); ?>
 <?php snippet('footer') ?>

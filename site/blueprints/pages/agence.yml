@@ -6,6 +6,9 @@ fields:
   cover: 
     label: Image de couverture
     type: files
+  chapeau:
+    label: Chapeau
+    type: markdown
   text:
     label: Texte
     type: markdown

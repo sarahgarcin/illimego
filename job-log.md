@@ -4,37 +4,38 @@
 - Toutes les typos sont à grossir on peut le faire en live si tu veux
 
 Header / footer
-- mettre une bande blanche derrière le logo de gauche
-- icônes réseaux sociaux à espacer d’une largeur de gouttière / icone
-- Les menus et langues doivent être ferrées à gauche avec le menu burger
-- La croix du menu burger est pas centrée
-- langues + proche de ilimego
-- filtres + loin des langues
+- ok - mettre une bande blanche derrière le logo de gauche
+- non - icônes réseaux sociaux à espacer d’une largeur de gouttière / icone
+- ok - Les menus et langues doivent être ferrées à gauche avec le menu burger
+- ok - La croix du menu burger est pas centrée
+- ok - langues + proche de ilimego
+- ok - filtres + loin des langues
 
 Home : 
 
 
 Page ProjetS : 
-- Projets en noir et blanc sauf au roll over
+- ok - Projets en noir et blanc sauf au roll over
 
 Page Projet :
-- Logo qui se barre avec le reste
-- il manque la fiche technique enbas à gauche
+- ok - Logo qui se barre avec le reste
+- ok - il manque la fiche technique enbas à gauche
 - le simages sont cliquables en viwbox
 
 
 Page Actu :
-- En principe la justif est plus courte d’une colonne je vois avec Guillaume si on le change
-- Sinon RAS
+- ok - En principe la justif est plus courte d’une colonne je vois avec Guillaume si on le change
 
 Page agence :
-- le rythme horizontal est pas le même je t’ai fait deux capchas.
-- ajouter un chapeau (même taille que sur projet)
-- faire une page contact + mettre les publications après équipe 
+- ok - le rythme horizontal est pas le même je t’ai fait deux capchas.
+- ok - ajouter un chapeau (même taille que sur projet)
+- ok - faire une page contact + mettre les publications après équipe 
 
 
 ## To do 
-- faire le système réseaux sociaux
+- ok - faire le système réseaux sociaux
+- ilimelgo trop proche du menu 
+- ajouter une lightbox
 - améliorer le système de changer de langues
 - faire le système jour / nuit
 - version smarphone à peaufiner
@@ -46,6 +47,9 @@ Page agence :
 
 
 ## Log
+- j'ai changé la grille en 15 colonnes avec pour être au milieu une colonne qui s'appelle col-xs-75
+
+----
 - j'ai fait tout le back sauf réseaux sociaux (barre footer)
 - intégration des typos
 - settings des variables css (conversion de pt vers px)
