@@ -43,10 +43,15 @@ footer{
 		font-family: $titleFont; 
 		text-transform: uppercase;
 		font-size: $desktopSmallSmall;
+		&:hover{
+			font-weight: bold;
+		}
 		// margin: $marginSmall 0;
 		&:not(.active){
 			display: none;
-			margin-left: 15px;
+			margin-left: calc(15px + 17px);
+			position: absolute;
+			top: 100%;
 		}
 		&.active{
 			display: block;

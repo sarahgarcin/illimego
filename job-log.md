@@ -35,8 +35,8 @@ Page agence :
 ## To do 
 - ok - faire le système réseaux sociaux
 - ilimelgo trop proche du menu 
-- ajouter une lightbox
-- améliorer le système de changer de langues
+- ok - ajouter une lightbox
+- ok - améliorer le système pour changer de langues
 - faire le système jour / nuit
 - version smarphone à peaufiner
 - version tablette ?
