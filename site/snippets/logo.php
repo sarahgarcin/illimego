@@ -1,20 +1,25 @@
 <!-- MOBILE LOGO -->
-<div class="mobile-menu show-for-small-only">
-	<div class="mobile-menu_logo">
-		<a href="<?= $site->url()?>" title="<?= $site->title()?>">
-			<?php if($image = $site->logo()->toFile()): ?>
-			<img src="<?= $image->url()?>" alt="<?= $image->alt()?>">
-		<?php endif;?>
-		</a>
+<div class="mobile-menu show-for-small-only row">
+	<div class="mobile-menu_logo col-xs-75">
+		<div class="mobile-menu_logo_inner">
+			<a href="<?= $site->url()?>" title="<?= $site->title()?>">
+				<?php if($image = $site->logo()->toFile()): ?>
+				<img src="<?= $image->url()?>" alt="<?= $image->alt()?>">
+			<?php endif;?>
+			</a>
+		</div>
 	</div>
-	<div class="mobile-menu_title">
-		<h1><?= $site->title() ?></h1>
+	<div class="mobile-menu_wrapper row col-xs-75">
+		<div class="mobile-menu_btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="mobile-menu_title">
+			<h1><?= $site->title() ?></h1>
+		</div>
 	</div>
-	<div class="mobile-menu_btn">
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
+
 </div>
 
 <!-- DESKTOP LOGO -->

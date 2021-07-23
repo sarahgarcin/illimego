@@ -1,14 +1,23 @@
 // -------------- MOBILE-FIRST HOME --------------
-.list-projects li{
-	padding:0;
-  // margin-bottom: 16px;
-  // padding-right: $marginSmall;
-  // padding-left: $marginSmall;
+.list-projects {
+	padding: 0;
+	li{
+		padding:0;
+	}
+}
+
+@media only screen and (max-width: 48em){
+	.list-projects {
+		margin: 0;
+	}
 }
 
 
 // -------------- DESKTOP HOME --------------
 @media only screen and (min-width: 64em){
+	.list-projects {
+		// margin: inherit;
+	}
 	.list-projects li{
 		width: calc(50% - 1rem);
 	}

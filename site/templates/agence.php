@@ -2,15 +2,20 @@
 <?php snippet('menu') ?>
 
 <div class="row">
-	<aside class="agence_cover col-xs-8 col-md-3">
+	<aside class="agence_cover col-xs-8 col-md-3 hide-for-small-only">
 			<?php if($image = $page->cover()->toFile()):?>
 					<figure>
 	  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
 	  			</figure>
 			<?php endif; ?>
 	</aside>
+	<div class="agence_header page_header show-for-small-only">
+		<div class="page_title">
+			<?= $page->title()?>
+		</div>
+	</div>
 	<main class="col-xs-15 col-md-8 col-md-offset-1">
-		<h1><?= $page->title()->html()?></h1>
+		<h1 class="hide-for-small-only"><?= $page->title()->html()?></h1>
 		<div class="agence_text-inner row">
 			<div class="agence_text-inner_main col-xs-15 col-md-10">
 				<div class="chapeau">

@@ -33,16 +33,18 @@ Page agence :
 
 
 ## To do 
+- système de langue sur version smartphone 
 - ok - faire le système réseaux sociaux
-- ilimelgo trop proche du menu 
+- ok - ilimelgo trop proche du menu 
 - ok - ajouter une lightbox
 - ok - améliorer le système pour changer de langues
 - ok - faire le système jour / nuit
-- précédent / suivant
+- ok - précédent / suivant
 - version smarphone à peaufiner
 - version tablette ?
 - version grand ordi ?
 - cookie ? RGPD -- 
+- clean css / js
 
 ## Questions
 

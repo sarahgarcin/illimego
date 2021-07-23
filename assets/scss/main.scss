@@ -9,7 +9,7 @@
 }
 
 body{
-	margin: $marginPage; 
+	margin: $marginPageMobile; 
   font-size: 16px; 
   font-family: $textFont;
   line-height: 1.22;
@@ -80,11 +80,13 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
   margin-top: 0;
-  margin-bottom: 80px;
+  // margin-bottom: 80px;
   font-size: $desktopTitle;
 }
 p{
   margin: $marginNormal 0;
+  font-size: $mobileText;
+  line-height: 1.3;
 }
 
 figure.portrait{
@@ -118,8 +120,16 @@ figcaption{
 	display:block;
 }
 
+.show-for-small-only.row{
+  display:flex;
+}
+
 .hide-for-small-only{
 	display:none;
+}
+
+main{
+  margin-bottom: 100px;
 }
 
 main, aside{
@@ -136,16 +146,26 @@ aside p:first-child{
 
 .page_header{
   position: fixed;
-  width: 100%;
+  width: calc(100% - (#{$marginPageMobile}*2));
   max-width: 100%;
-  left:0; 
-  top: 100px; 
+  left:$marginPageMobile; 
+  top: 72px; 
   background: #FFF;
-  z-index: 10000; 
+  z-index: 1000; 
+  padding: $marginSmall 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; 
+  font-family: $titleFont; 
+  font-size: $mobileMenu;
+  text-transform: uppercase;
   &.row{margin:0;}
 }
 
 // ACTUALITÉS
+.actualites{
+  padding: 0;
+}
+
 .content-to-hide{ 
   max-height:0; 
   overflow: hidden;
@@ -249,17 +269,13 @@ aside.list-projects_text{
 }
 
 .prev_nex-nav{
-  text-align: center;
-  a{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  a{padding-left: $marginNormal;}
 }
 
 // Agence
 .chapeau{
   p{
-    font-size: $desktopSmallSmall+0.2em;
+    font-size: 1.1em;
   }
 }
 
@@ -300,6 +316,7 @@ aside.list-projects_text{
   }
   li{
     margin-bottom: $marginBig;
+    padding: 0 1rem;
     h3{
       margin-bottom:0;
       text-transform: uppercase; 
@@ -325,11 +342,13 @@ aside.list-projects_text{
 @media only screen and (min-width: 64em){
   body{
     margin-bottom: 100px;
+    margin: $marginPage;
   }
   p{
     font-size: $desktopText;
     line-height: 1.3;
   }
+  h1{margin-bottom: 80px;}
   .show-for-small-only{
       display:none !important;
   }
@@ -396,6 +415,24 @@ aside.list-projects_text{
       &.active{
         max-height: 4000px;
       } 
+    }
+  }
+  .prev_nex-nav{
+    text-align: center;
+    a{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  // ACTUALITÉS
+  .actualites{
+    padding: 0 1rem;
+  }
+
+  // AGENCE
+  .chapeau{
+    p{
+      font-size: $desktopSmallSmall+0.2em;
     }
   }
 }

@@ -7,7 +7,7 @@
 	</div>
 	<main>
 		<div class="content-inner actualites col-xs-15 col-md-5 col-md-offset-4">
-			<h1><?= $page->title()->html()?></h1>
+			<h1 class="hide-for-small-only"><?= $page->title()->html()?></h1>
 			<?php $events = $page->children()->listed();?>
 			<?php foreach($events as $child):?>
 				<article class="actualite">

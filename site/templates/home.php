@@ -2,9 +2,9 @@
 <?php snippet('menu') ?>
 
 	<main>
-		<ul class="list-projects list-projects_selected row col-xs-12 col-md-8 col-md-offset-4">
+		<ul class="list-projects list-projects_selected row col-xs-15 col-md-8 col-md-offset-4">
 		  <?php foreach ($page->projects()->split() as $project): ?>
-		  	<li class="col-xs-12 col-sm-75">
+		  	<li class="col-xs-15 col-sm-75">
 		  		<?php $project = $site->find($project)?>
 		  		<a href="<?= $project->url()?>" title="<?= $project->title()?>">
 			  		<div class="list-project_thumbs">

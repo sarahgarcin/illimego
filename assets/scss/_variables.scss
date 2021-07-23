@@ -6,6 +6,7 @@ $marginNormal: 20px;
 $marginBig: $marginNormal *2;  
 $marginSmall: $marginNormal/2;
 $marginPage : 28px;
+$marginPageMobile : 14px;
 
 // Colors
 $mainColor: #000; 
@@ -17,8 +18,9 @@ $infosFont : "IBM Plex Mono";
 
 // FontSize
 $mobileMenu : 1.35em;
-$mobileTitle : 2.5em;
-$mobileText : 1.2em;
+$mobileTitle : 26px;
+$mobileText : 0.95em;
+$mobileSmallSmall : 0.7em;
 
 $desktopMenu : 1.1em;
 $desktopSmallText : 1em;

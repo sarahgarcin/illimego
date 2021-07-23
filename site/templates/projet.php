@@ -2,7 +2,7 @@
 <?php snippet('menu') ?>
 
 	<!-- seulement pour MOBILE -->
-	<div class="projet_header page_header show-for-small-only">
+	<div class="projet_header page_header show-for-small-only row between-xs">
 		<div class="page_title">
 			<?= $page->parent()->parent()->title()?>
 		</div>
@@ -10,13 +10,24 @@
 		<!-- collection listant tous les projets définie dans site>collections>projets.php-->
 		<?php $projets = $kirby->collection("projets");?>
 		<?php //print_r($projets)?>
-		<?php if($prev=$page->prev($projets)): ?>
+		<!-- <?php if($prev=$page->prev($projets)): ?>
 			<a href="<?=  $prev->url() ?>">Préc</a>
 		<?php endif ?>
 
 		<?php if($next=$page->next($projets)): ?>
 			<a href="<?=  $next->url() ?>">Suiv</a>
-		<?php endif ?>
+		<?php endif ?> -->
+		<div class="prev_nex-nav">
+				<?php if ($projets->isNotEmpty()) : ?>
+				  <?php if ($prevPage = $page->getPrev($projets)) : ?>
+				      <a href="<?= $prevPage->url() ?>">Préc</a>
+				  <?php endif ?>
+
+				  <?php if ($nextPage = $page->getNext($projets)) : ?>
+				      <a href="<?= $nextPage->url() ?>">Suiv</a>
+				  <?php endif ?>
+				<?php endif ?>			
+			</div>
 	</div>
 	<!-- fin MOBILE -->
 	<div class="row">

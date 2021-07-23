@@ -8,12 +8,12 @@ footer{
 	bottom:0; 
 	background: #FFF;
 	z-index: 10000;
-	padding: $marginSmall 0; 
+	padding: $marginSmall; 
 	// padding-bottom: 0;
 	&.row{margin:0;}
 	a{text-decoration:none;}
 	.lower-left-text{
-		font-size: $desktopTitle;
+		font-size: $mobileTitle;
 	}
 	.lower-right-text{font-size: 28px;}
 	.lower-right-text, .lower-left-text{
@@ -26,6 +26,7 @@ footer{
 	.footer_right-part{
 		padding: 0;
 		padding-bottom: 3px;
+		margin:0;
 	}
 	// .lower-right-text{
 	// 	text-align: right;
@@ -37,21 +38,23 @@ footer{
 
 .languages{
 	background: #FFF;
-	padding:0;
 	pointer-events: auto;
+	padding:0;
 	li{
 		font-family: $titleFont; 
 		text-transform: uppercase;
-		font-size: $desktopSmallSmall;
+		font-size: $mobileSmallSmall;
 		&:hover{
 			font-weight: bold;
 		}
 		// margin: $marginSmall 0;
 		&:not(.active){
 			display: none;
-			margin-left: calc(15px + 17px);
 			position: absolute;
-			top: 100%;
+			// top: 100%;
+			// margin-left: calc(15px + 17px);
+			top: 8px;
+			margin-left: 15px;
 		}
 		&.active{
 			display: block;
@@ -62,7 +65,8 @@ footer{
 		.select-btn{
 			cursor: pointer;
 			display:none;
-			margin-right: 15px;;
+			// margin-right: 15px;
+			margin-right: 0;
 		}
 	}
 }
@@ -149,38 +153,54 @@ footer{
 		.footer_right-part{
 			// background: #FFF; 
 			padding:0;
+			margin-left: 60%;
 		}
-	}
-	.lower-left-text{
-		// background: #FFF; 
-		padding:0;
-		padding-left:0px;
-		line-height: 0.7;
-	}
+	
+		.lower-left-text{
+			// background: #FFF;
+			font-size: $desktopTitle; 
+			padding:0;
+			padding-left:0px;
+			line-height: 0.7;
+		}
 
-	// .inner-footer{
-	// 	position: relative;
-	// }
-	.lower-right-text{
-		// transform: translate(20%, -100%);
-		position: absolute;
-		right: -15px;
-		bottom: 63px;
-		
-			transform: rotate(-90deg);
-			// margin:0;
-			width: 140px;
-		p{
-			// text-align: left !important;
-			// transform: rotate(-90deg);	
-			margin:0;
-			text-align: left !important;
-			// width: 120px;
-			 // transform-origin: right top;
+		// .inner-footer{
+		// 	position: relative;
+		// }
+		.lower-right-text{
+			// transform: translate(20%, -100%);
+			position: absolute;
+			right: -15px;
+			bottom: 63px;
+			
+				transform: rotate(-90deg);
+				// margin:0;
+				width: 140px;
+			p{
+				// text-align: left !important;
+				// transform: rotate(-90deg);	
+				margin:0;
+				text-align: left !important;
+				// width: 120px;
+				 // transform-origin: right top;
+			}
 		}
+		// .widgets{
+		// 	padding: 0;
+		// }
 	}
 	.languages{
 		// margin-top:-10px;
+		li{
+			font-size: $desktopSmallSmall;
+			&:not(.active){
+				top: 120%;
+				margin-left: calc(15px + 17px);
+			}
+			.select-btn{
+				margin-right: 15px;;
+			}
+		}
 	}
 }
 

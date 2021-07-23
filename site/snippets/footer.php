@@ -7,14 +7,14 @@
 <!--  hide-for-small-only -->
 <footer>
   <div class="inner-footer row bottom-xs">
-    <div class="lower-left-text col-xs-6 col-md-4">
+    <div class="lower-left-text col-xs-75 col-md-4">
       <?= $site->lefttext()?>
     </div>
-    <div class="footer_right-part col-xs-6 col-md-2 col-md-offset-9 row bottom-xs">
-      <nav class="languages col-xs-7 show-for-small-only">
+    <div class="footer_right-part col-xs-75 col-md-2 col-md-offset-9 row bottom-xs">
+      <nav class="languages col-xs-8 show-for-small-only">
         <?php snippet('languages')?>
       </nav>
-      <div class="widgets col-xs-5 col-md-75">
+      <div class="widgets col-xs-7 col-md-75">
         <ul class="row between-xs">
           <li class="mentions">
             <a href="<?= $site->find('mentions-legales')->url()?>" title="<?= $site->find('mentions-legales')->title()?>">

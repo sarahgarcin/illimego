@@ -7,7 +7,7 @@
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  margin: 28px;
+  margin: 14px;
   font-size: 16px;
   font-family: "IBM Plex Serif";
   line-height: 1.22; }
@@ -55,11 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-top: 0;
-  margin-bottom: 80px;
   font-size: 40px; }
 
 p {
-  margin: 20px 0; }
+  margin: 20px 0;
+  font-size: 0.95em;
+  line-height: 1.3; }
 
 figure.portrait {
   width: 70%; }
@@ -82,33 +83,32 @@ header {
   top: 0;
   background: #FFF;
   z-index: 10000;
-  pointer-events: none; }
+  padding: 14px; }
   header.row {
     margin: 0; }
   header a {
     text-decoration: none; }
   header .mobile-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%; }
+    width: 100%;
+    margin: 0; }
+    header .mobile-menu .mobile-menu_wrapper {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
   header .mobile-menu_title h1 {
     font-weight: 100;
-    font-size: 41px;
+    font-size: 35px;
     margin: 0;
     cursor: pointer;
     pointer-events: auto; }
-  header .mobile-menu_logo {
-    padding: 10px 20px 0 20px;
+  header .mobile-menu_logo .mobile-menu_logo_inner {
     width: 25%;
-    max-width: 100px;
-    min-width: 80px; }
+    max-width: 70px;
+    min-width: 40px; }
   header .mobile-menu_btn {
     display: block;
     position: relative;
@@ -150,7 +150,7 @@ header {
     max-height: 0;
     overflow: hidden;
     background: #FFF;
-    padding-left: 5.5vw;
+    margin: 0;
     width: 100%;
     -webkit-transition: max-height 1s linear;
     -o-transition: max-height 1s linear;
@@ -160,7 +160,7 @@ header {
       overflow: auto; }
   header .main-nav {
     margin-top: 20px;
-    padding: 0 28px 0 0; }
+    padding: 0; }
     header .main-nav > ul > li {
       padding-top: 2px;
       padding-bottom: 2px;
@@ -179,8 +179,7 @@ header {
       transition: text-align 0.3s linear; }
       header .main-nav > ul > li.active > span {
         display: block;
-        text-align: left;
-        margin-bottom: 20px; }
+        text-align: left; }
       header .main-nav > ul > li:last-child {
         border-bottom: 1px solid #000; }
   header .main-nav_submenu {
@@ -189,7 +188,8 @@ header {
     padding: 0;
     -webkit-transition: max-height 1s linear;
     -o-transition: max-height 1s linear;
-    transition: max-height 1s linear; }
+    transition: max-height 1s linear;
+    margin-top: 0; }
     header .main-nav_submenu > li {
       font-size: 0.55em;
       text-transform: uppercase;
@@ -207,7 +207,8 @@ header {
       max-height: 3000px;
       -webkit-transition: all 1s linear;
       -o-transition: all 1s linear;
-      transition: all 1s linear; }
+      transition: all 1s linear;
+      margin-top: 20px; }
     header .main-nav_submenu a.active {
       color: #000; }
   header .header-right {
@@ -275,8 +276,14 @@ header {
         position: fixed;
         left: calc(86.667% - 28px + 10px); } }
 
-.list-projects li {
+.list-projects {
   padding: 0; }
+  .list-projects li {
+    padding: 0; }
+
+@media only screen and (max-width: 48em) {
+  .list-projects {
+    margin: 0; } }
 
 @media only screen and (min-width: 64em) {
   .list-projects li {
@@ -313,13 +320,13 @@ footer {
   bottom: 0;
   background: #FFF;
   z-index: 10000;
-  padding: 10px 0; }
+  padding: 10px; }
   footer.row {
     margin: 0; }
   footer a {
     text-decoration: none; }
   footer .lower-left-text {
-    font-size: 40px; }
+    font-size: 26px; }
   footer .lower-right-text {
     font-size: 28px; }
   footer .lower-right-text, footer .lower-left-text {
@@ -329,23 +336,24 @@ footer {
     margin: 0; }
   footer .footer_right-part {
     padding: 0;
-    padding-bottom: 3px; }
+    padding-bottom: 3px;
+    margin: 0; }
 
 .languages {
   background: #FFF;
-  padding: 0;
-  pointer-events: auto; }
+  pointer-events: auto;
+  padding: 0; }
   .languages li {
     font-family: "Bw Gradual";
     text-transform: uppercase;
-    font-size: 0.85em; }
+    font-size: 0.7em; }
     .languages li:hover {
       font-weight: bold; }
     .languages li:not(.active) {
       display: none;
-      margin-left: calc(15px + 17px);
       position: absolute;
-      top: 100%; }
+      top: 8px;
+      margin-left: 15px; }
     .languages li.active {
       display: block; }
       .languages li.active .select-btn {
@@ -353,7 +361,7 @@ footer {
     .languages li .select-btn {
       cursor: pointer;
       display: none;
-      margin-right: 15px; }
+      margin-right: 0; }
 
 .widgets {
   padding: 0; }
@@ -415,28 +423,45 @@ footer {
     footer > .row {
       margin: 0; }
     footer .footer_right-part {
-      padding: 0; }
-  .lower-left-text {
-    padding: 0;
-    padding-left: 0px;
-    line-height: 0.7; }
-  .lower-right-text {
-    position: absolute;
-    right: -15px;
-    bottom: 63px;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    width: 140px; }
-    .lower-right-text p {
-      margin: 0;
-      text-align: left !important; } }
+      padding: 0;
+      margin-left: 60%; }
+    footer .lower-left-text {
+      font-size: 40px;
+      padding: 0;
+      padding-left: 0px;
+      line-height: 0.7; }
+    footer .lower-right-text {
+      position: absolute;
+      right: -15px;
+      bottom: 63px;
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      width: 140px; }
+      footer .lower-right-text p {
+        margin: 0;
+        text-align: left !important; }
+  .languages li {
+    font-size: 0.85em; }
+    .languages li:not(.active) {
+      top: 120%;
+      margin-left: calc(15px + 17px); }
+    .languages li .select-btn {
+      margin-right: 15px; } }
 
 .show-for-small-only {
   display: block; }
 
+.show-for-small-only.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .hide-for-small-only {
   display: none; }
+
+main {
+  margin-bottom: 100px; }
 
 main, aside {
   padding-top: 128px; }
@@ -449,14 +474,23 @@ aside p:first-child {
 
 .page_header {
   position: fixed;
-  width: 100%;
+  width: calc(100% - (14px*2));
   max-width: 100%;
-  left: 0;
-  top: 100px;
+  left: 14px;
+  top: 72px;
   background: #FFF;
-  z-index: 10000; }
+  z-index: 1000;
+  padding: 10px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-family: "Bw Gradual";
+  font-size: 1.35em;
+  text-transform: uppercase; }
   .page_header.row {
     margin: 0; }
+
+.actualites {
+  padding: 0; }
 
 .content-to-hide {
   max-height: 0;
@@ -537,14 +571,11 @@ aside.list-projects_text li {
     font-size: 0.85em;
     font-family: "IBM Plex Mono"; }
 
-.prev_nex-nav {
-  text-align: center; }
-  .prev_nex-nav a {
-    padding-left: 10px;
-    padding-right: 10px; }
+.prev_nex-nav a {
+  padding-left: 20px; }
 
 .chapeau p {
-  font-size: 1.05em; }
+  font-size: 1.1em; }
 
 .agence_text-inner_main p:first-child {
   margin-top: 0px; }
@@ -574,7 +605,8 @@ aside.list-projects_text li {
   font-size: 40px; }
 
 .agence_equipe li {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  padding: 0 1rem; }
   .agence_equipe li h3 {
     margin-bottom: 0;
     text-transform: uppercase;
@@ -588,10 +620,13 @@ aside.list-projects_text li {
 
 @media only screen and (min-width: 64em) {
   body {
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    margin: 28px; }
   p {
     font-size: 0.9em;
     line-height: 1.3; }
+  h1 {
+    margin-bottom: 80px; }
   .show-for-small-only {
     display: none !important; }
   .hide-for-small-only {
@@ -643,4 +678,13 @@ aside.list-projects_text li {
       .projet_text-projet .projet_text h2 + p {
         margin-top: 0; }
     .projet_text-projet .projet_text.active {
-      max-height: 4000px; } }
+      max-height: 4000px; }
+  .prev_nex-nav {
+    text-align: center; }
+    .prev_nex-nav a {
+      padding-left: 10px;
+      padding-right: 10px; }
+  .actualites {
+    padding: 0 1rem; }
+  .chapeau p {
+    font-size: 1.05em; } }
