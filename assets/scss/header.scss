@@ -36,9 +36,10 @@ header{
 		// padding: $marginSmall $marginNormal 0 $marginNormal;
 
 		.mobile-menu_logo_inner{
-			width: 25%;
-			max-width: 70px;
-			min-width: 40px;
+			// width: 25%;
+			// max-width: 60px;
+			// min-width: 40px;
+			width: 40px;
 		}
 	}
 	.mobile-menu_btn{
@@ -161,13 +162,19 @@ header{
 	}
 }
 
+// -------------- TABLET HEADER --------------
+@media only screen and (min-width: 48em) {
+
+}
+
 
 // -------------- DESKTOP HEADER --------------
-@media only screen and (min-width: 64em){
+@media only screen and (min-width: 62em){
 	header{
 		position: absolute;
 		padding: $marginPage;
 		background: transparent;
+		z-index: 0; 
 		// .nav{
 		// 	display:flex; 
 		// 	height:auto; 
@@ -246,3 +253,23 @@ header{
 		}
 	}
 }
+
+// -------------- CORRECTION DU BUG SAUT DU LOGO DROIT  --------------
+@media only screen and (min-width: 48em) and (max-width: 1210px){
+	header{
+		.mobile-menu_title {
+			h1{
+				font-size: 31px;
+				margin-top: -2px;
+			}
+		} 
+		.desktop-menu{
+			.desktop-menu_logo{
+				figure{width:60px;}
+			}
+		}
+	}
+}
+
+
+

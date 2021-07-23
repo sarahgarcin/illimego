@@ -106,9 +106,7 @@ header {
     cursor: pointer;
     pointer-events: auto; }
   header .mobile-menu_logo .mobile-menu_logo_inner {
-    width: 25%;
-    max-width: 70px;
-    min-width: 40px; }
+    width: 40px; }
   header .mobile-menu_btn {
     display: block;
     position: relative;
@@ -215,11 +213,12 @@ header {
     pointer-events: auto;
     padding: 0; }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 62em) {
   header {
     position: absolute;
     padding: 28px;
-    background: transparent; }
+    background: transparent;
+    z-index: 0; }
     header .nav {
       padding: 0;
       margin: 0; }
@@ -276,6 +275,13 @@ header {
         position: fixed;
         left: calc(86.667% - 28px + 10px); } }
 
+@media only screen and (min-width: 48em) and (max-width: 1210px) {
+  header .mobile-menu_title h1 {
+    font-size: 31px;
+    margin-top: -2px; }
+  header .desktop-menu .desktop-menu_logo figure {
+    width: 60px; } }
+
 .list-projects {
   padding: 0; }
   .list-projects li {
@@ -285,7 +291,7 @@ header {
   .list-projects {
     margin: 0; } }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 62em) {
   .list-projects li {
     width: calc(50% - 1rem); }
   .list-projects_selected li {
@@ -416,7 +422,7 @@ footer {
 .icon-twitter::before {
   content: '\f099'; }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 62em) {
   footer {
     background: #FFF;
     padding: 28px; }
@@ -618,7 +624,7 @@ aside.list-projects_text li {
     content: "—";
     display: block; }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 62em) {
   body {
     margin-bottom: 100px;
     margin: 28px; }
@@ -661,6 +667,8 @@ aside.list-projects_text li {
     .list-projects_template li:hover {
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
+  .projet_main, .projets_main {
+    margin-left: 0; }
   .projet_text-projet .see-more.active {
     display: none; }
   .projet_text-projet .projet_text {

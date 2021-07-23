@@ -339,7 +339,7 @@ aside.list-projects_text{
 
 
 // -------------- DESKTOP GENERAL --------------
-@media only screen and (min-width: 64em){
+@media only screen and (min-width: 62em){
   body{
     margin-bottom: 100px;
     margin: $marginPage;
@@ -396,6 +396,9 @@ aside.list-projects_text{
 
 
   // PROJET
+  .projet_main, .projets_main{
+    margin-left : 0;
+  }
   .projet_text-projet{
     .see-more{
       &.active{display:none;}

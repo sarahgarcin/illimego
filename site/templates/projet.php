@@ -50,7 +50,7 @@
 			<?php endif;?>
 		</aside>
 		<!-- fin DESKTOP -->
-		<main class="col-xs-15 col-md-8">
+		<main class="projet_main col-xs-15 col-sm-9 col-sm-offset-3 col-md-8">
 			<h1><?= $page->title()?></h1>
 			<div class="projet_introduction-text show-for-small-only">
 				<?= $page->summary()->kt()?>

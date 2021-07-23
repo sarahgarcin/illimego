@@ -40,7 +40,7 @@ Page agence :
 - ok - améliorer le système pour changer de langues
 - ok - faire le système jour / nuit
 - ok - précédent / suivant
-- version smarphone à peaufiner
+- ok - version smarphone à peaufiner
 - version tablette ?
 - version grand ordi ?
 - cookie ? RGPD -- 

@@ -14,7 +14,7 @@
 			<?= $page->title()?>
 		</div>
 	</div>
-	<main class="col-xs-15 col-md-8 col-md-offset-1">
+	<main class="col-xs-15 col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-1">
 		<h1 class="hide-for-small-only"><?= $page->title()->html()?></h1>
 		<div class="agence_text-inner row">
 			<div class="agence_text-inner_main col-xs-15 col-md-10">
