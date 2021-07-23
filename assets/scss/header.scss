@@ -99,6 +99,7 @@ header{
 			// a{color: $mainColor;}
 			&.active{
 				// color: #000;
+				text-align: left;
 				& > span{
 					display: block;
 					text-align: left;

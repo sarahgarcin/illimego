@@ -41,8 +41,8 @@ Page agence :
 - ok - faire le système jour / nuit
 - ok - précédent / suivant
 - ok - version smarphone à peaufiner
-- version tablette ?
-- version grand ordi ?
+- ok - version tablette ?
+- ok - version grand ordi ?
 - cookie ? RGPD -- 
 - clean css / js
 

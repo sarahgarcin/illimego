@@ -25,9 +25,17 @@ body.night {
     color: #FFF; }
   body.night header .mobile-menu_btn span {
     background: #FFF; }
-  body.night .desktop-menu_logo figure {
+  body.night .desktop-menu_logo figure, body.night .mobile-menu_logo_inner figure {
     -webkit-filter: invert(1);
     filter: invert(1); }
+  body.night header {
+    background: #000; }
+  body.night header .main-nav > ul > li {
+    border-color: #FFF; }
+  body.night .page_header {
+    background: #000;
+    color: #FFF;
+    border-color: #FFF; }
 
 ul, ol {
   margin: 0;
@@ -175,9 +183,11 @@ header {
       -webkit-transition: text-align 0.3s linear;
       -o-transition: text-align 0.3s linear;
       transition: text-align 0.3s linear; }
-      header .main-nav > ul > li.active > span {
-        display: block;
+      header .main-nav > ul > li.active {
         text-align: left; }
+        header .main-nav > ul > li.active > span {
+          display: block;
+          text-align: left; }
       header .main-nav > ul > li:last-child {
         border-bottom: 1px solid #000; }
   header .main-nav_submenu {

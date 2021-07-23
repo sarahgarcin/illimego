@@ -38,10 +38,17 @@ body.night{
   header .mobile-menu_btn span{
     background: #FFF;
   }
-  .desktop-menu_logo{
+  .desktop-menu_logo, .mobile-menu_logo_inner{
     figure{
       filter: invert(1);
     }
+  }
+  header{background: #000;}
+  header .main-nav > ul > li{border-color: #FFF;}
+  .page_header{
+    background: #000; 
+    color: #FFF; 
+    border-color: #FFF;
   }
 }
 

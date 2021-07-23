@@ -4,8 +4,10 @@
 		<div class="mobile-menu_logo_inner">
 			<a href="<?= $site->url()?>" title="<?= $site->title()?>">
 				<?php if($image = $site->logo()->toFile()): ?>
-				<img src="<?= $image->url()?>" alt="<?= $image->alt()?>">
-			<?php endif;?>
+					<figure>
+						<img src="<?= $image->url()?>" alt="<?= $image->alt()?>">
+					</figure>
+				<?php endif;?>
 			</a>
 		</div>
 	</div>
