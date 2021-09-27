@@ -62,6 +62,7 @@ body.night{
 //   margin:0;
 //   padding: $marginPage;
 //   z-index:10000;
+//   pointer-events:none;
 //   > div{
 //      height: calc(100vh - (#{$marginPage}*2));
 //     border-right: 1px solid pink;
@@ -94,6 +95,9 @@ p{
   margin: $marginNormal 0;
   font-size: $mobileText;
   line-height: 1.3;
+}
+p a {
+  text-decoration: underline;
 }
 
 figure.portrait{
@@ -168,6 +172,27 @@ aside p:first-child{
   &.row{margin:0;}
 }
 
+// PROJET
+
+.projet_text-projet{
+  .projet_text{
+    max-height:0;
+    overflow: hidden;
+    transition: max-height 1s linear;
+    h2{
+      text-transform: uppercase; 
+      font-weight: 500;
+      font-size: 0.8em;
+      margin-top: $marginNormal;
+      margin-bottom: $marginSmall;
+      & + p{margin-top:0;}
+    }
+    &.active{
+      max-height: 4000px;
+    } 
+  }
+}
+
 // ACTUALITÉS
 .actualites{
   padding: 0;
@@ -184,7 +209,12 @@ aside p:first-child{
 }
 
 article.actualite{
-  margin-bottom: $marginBig*2;
+  padding-bottom: $marginBig;
+  margin-top: $marginBig;
+  border-bottom: 1px solid #000;
+  &:last-child{
+    border: none;
+  }
   .see-more{
     &.active{display:none;}
   }
@@ -198,7 +228,7 @@ article.actualite{
     margin: 0;
     font-weight: 500; 
     text-transform: uppercase;
-    font-size: $desktopText;
+    font-size: $desktopMenu;
   }
   .actualite_date{
     font-family: $titleFont;
@@ -227,7 +257,11 @@ aside.list-projects_text{
     font-family: $titleFont;
     font-weight: 300;
     font-size: 1.2em;
-    &:hover{
+    margin-top: 5px;
+    .date-place{
+      font-size: 0.7em;
+    }
+    &:hover, &.active{
       font-weight: 500;
       &::before{
         content: "–";
@@ -238,6 +272,9 @@ aside.list-projects_text{
 
 .list-projects_template{
   margin:0;
+  .date-place{
+    font-size: 0.8em;
+  }
   li:hover .list-project_infos{
     background: transparent;
   }
@@ -250,6 +287,8 @@ aside.list-projects_text{
 }
 
 // PROJET
+
+
 .projet_images-gallery{
   figure{margin-bottom: $marginNormal;}
 }
@@ -314,6 +353,36 @@ aside.list-projects_text{
     margin-top: $marginNormal;
     margin-bottom: $marginSmall;
     & + p{margin-top:0;}
+  }
+}
+
+.agence_publi{
+  margin-bottom: $marginBig*10;
+  h2{
+    font-size: $desktopTitle; 
+  }
+  li{
+    font-family: $titleFont;
+    position: relative;
+    margin-bottom: $marginSmall;
+    a:hover{
+      font-weight: 500;
+    }
+    &:before{
+      content: "—";
+    }
+    a:hover + figure{
+      opacity: 1;
+    }
+    figure{
+      width: 30%;
+      vertical-align: top;
+      position: absolute;
+      right: 0; 
+      top: 0;
+      opacity: 0;
+      pointer-events:none;
+    }
   }
 }
 
@@ -395,9 +464,20 @@ aside.list-projects_text{
     li{
       filter: grayscale(1);
       transition: filter 1s linear;
-      &:hover{
+      &:hover, &.active{
         filter: grayscale(0);
       }
+    }
+  }
+  .cat-title{
+    font-size: 1em;
+    margin-top: $marginNormal;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 500;
+    font-family: $titleFont;
+    &:before{
+      content: "–";
     }
   }
 
@@ -406,29 +486,14 @@ aside.list-projects_text{
   .projet_main, .projets_main{
     margin-left : 0;
   }
-  .projet_text-projet{
-    .see-more{
-      &.active{display:none;}
-    }
-    .projet_text{
-      max-height:0;
-      overflow: hidden;
-      transition: max-height 1s linear;
-      h2{
-        text-transform: uppercase; 
-        font-weight: 500;
-        font-size: 0.8em;
-        margin-top: $marginNormal;
-        margin-bottom: $marginSmall;
-        & + p{margin-top:0;}
-      }
-      &.active{
-        max-height: 4000px;
-      } 
+  .projet_main h1{
+    &:before{
+      content: "— ";
     }
   }
   .prev_nex-nav{
     text-align: center;
+    font-family: $titleFont;
     a{
       padding-left: 10px;
       padding-right: 10px;

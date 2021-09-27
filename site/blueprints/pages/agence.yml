@@ -16,9 +16,6 @@ fields:
   contact: 
     label: Contact
     type: markdown
-  publications: 
-    label: Publications
-    type: markdown
   equipe: 
     label: L'équipe
     type: structure
@@ -35,5 +32,19 @@ fields:
       diplome: 
         label: Diplôme / Mini biographie
         type: markdown
+  publications: 
+    type: structure
+    fields: 
+      cover: 
+        label: Image 
+        type: files
+        query: page.images
+      title: 
+        label: Titre de la publication
+        type: text
+      pdf: 
+        label: PDF
+        type: files
+        query: page.documents
 
 

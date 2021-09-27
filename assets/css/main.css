@@ -70,6 +70,9 @@ p {
   font-size: 0.95em;
   line-height: 1.3; }
 
+p a {
+  text-decoration: underline; }
+
 figure.portrait {
   width: 70%; }
 
@@ -295,7 +298,7 @@ header {
 .list-projects {
   padding: 0; }
   .list-projects li {
-    padding: 0; }
+    padding: 10px; }
 
 @media only screen and (max-width: 48em) {
   .list-projects {
@@ -505,6 +508,23 @@ aside p:first-child {
   .page_header.row {
     margin: 0; }
 
+.projet_text-projet .projet_text {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 1s linear;
+  -o-transition: max-height 1s linear;
+  transition: max-height 1s linear; }
+  .projet_text-projet .projet_text h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8em;
+    margin-top: 20px;
+    margin-bottom: 10px; }
+    .projet_text-projet .projet_text h2 + p {
+      margin-top: 0; }
+  .projet_text-projet .projet_text.active {
+    max-height: 4000px; }
+
 .actualites {
   padding: 0; }
 
@@ -521,7 +541,11 @@ aside p:first-child {
     transition: all 0.5s ease; }
 
 article.actualite {
-  margin-bottom: 80px; }
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-bottom: 1px solid #000; }
+  article.actualite:last-child {
+    border: none; }
   article.actualite .see-more.active {
     display: none; }
 
@@ -533,7 +557,7 @@ article.actualite {
     margin: 0;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.9em; }
+    font-size: 1.1em; }
   .actualite_title .actualite_date {
     font-family: "Bw Gradual";
     font-size: 0.9em; }
@@ -553,14 +577,19 @@ article.actualite {
 aside.list-projects_text li {
   font-family: "Bw Gradual";
   font-weight: 300;
-  font-size: 1.2em; }
-  aside.list-projects_text li:hover {
+  font-size: 1.2em;
+  margin-top: 5px; }
+  aside.list-projects_text li .date-place {
+    font-size: 0.7em; }
+  aside.list-projects_text li:hover, aside.list-projects_text li.active {
     font-weight: 500; }
-    aside.list-projects_text li:hover::before {
+    aside.list-projects_text li:hover::before, aside.list-projects_text li.active::before {
       content: "–"; }
 
 .list-projects_template {
   margin: 0; }
+  .list-projects_template .date-place {
+    font-size: 0.8em; }
   .list-projects_template li:hover .list-project_infos {
     background: transparent; }
   .list-projects_template .list-project_infos {
@@ -616,6 +645,29 @@ aside.list-projects_text li {
   margin-bottom: 10px; }
   .agence_text-inner_main h2 + p {
     margin-top: 0; }
+
+.agence_publi {
+  margin-bottom: 400px; }
+  .agence_publi h2 {
+    font-size: 40px; }
+  .agence_publi li {
+    font-family: "Bw Gradual";
+    position: relative;
+    margin-bottom: 10px; }
+    .agence_publi li a:hover {
+      font-weight: 500; }
+    .agence_publi li:before {
+      content: "—"; }
+    .agence_publi li a:hover + figure {
+      opacity: 1; }
+    .agence_publi li figure {
+      width: 30%;
+      vertical-align: top;
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      pointer-events: none; }
 
 .agence_equipe h2 {
   font-size: 40px; }
@@ -674,31 +726,25 @@ aside.list-projects_text li {
     -o-transition: filter 1s linear;
     transition: filter 1s linear;
     transition: filter 1s linear, -webkit-filter 1s linear; }
-    .list-projects_template li:hover {
+    .list-projects_template li:hover, .list-projects_template li.active {
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
+  .cat-title {
+    font-size: 1em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 500;
+    font-family: "Bw Gradual"; }
+    .cat-title:before {
+      content: "–"; }
   .projet_main, .projets_main {
     margin-left: 0; }
-  .projet_text-projet .see-more.active {
-    display: none; }
-  .projet_text-projet .projet_text {
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height 1s linear;
-    -o-transition: max-height 1s linear;
-    transition: max-height 1s linear; }
-    .projet_text-projet .projet_text h2 {
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 0.8em;
-      margin-top: 20px;
-      margin-bottom: 10px; }
-      .projet_text-projet .projet_text h2 + p {
-        margin-top: 0; }
-    .projet_text-projet .projet_text.active {
-      max-height: 4000px; }
+  .projet_main h1:before {
+    content: "— "; }
   .prev_nex-nav {
-    text-align: center; }
+    text-align: center;
+    font-family: "Bw Gradual"; }
     .prev_nex-nav a {
       padding-left: 10px;
       padding-right: 10px; }

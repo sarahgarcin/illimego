@@ -16,5 +16,15 @@ fields:
     label: Texte
     type: markdown
     size: medium
+  link: 
+    label: Lien vers une autre page ou un projet
+    type: structure
+    fields: 
+      url: 
+        label: URL
+        type: url
+      text: 
+        label: Texte à afficher
+        type: text
 
 

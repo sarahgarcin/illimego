@@ -115,11 +115,11 @@ function init(){
 	// --------------  HOME -------------- 
 	// Packery
 		// init Packery
-		var $grid = $('.list-projects').packery({
-		  itemSelector: 'li',
-	  	gutter: 20
-		});
-		$grid.packery();
+		// var $grid = $('.list-projects').packery({
+		//   itemSelector: 'li',
+	 //  	gutter: 20
+		// });
+		// $grid.packery();
 		// layout Packery after each image loads
 		// $grid.imagesLoaded().progress( function() {
 		//   $grid.packery();
@@ -127,9 +127,29 @@ function init(){
 
 		var filters =[] ;
 
-		$('.filters > ul > li').each(function(i){
-			filters[i] = $(this).attr('data-filter');
-		});
+		// $('.filters > ul > li').each(function(i){
+		// 	filters[i] = $(this).attr('data-filter');
+		// });
+
+		// $('.filters > ul > li').on( 'click', function() {
+		// 	if($(this).hasClass('not-active')){
+		// 		$(this).removeClass('not-active');
+		// 		filters.push($(this).attr('data-filter'));
+		// 		console.log(filters);
+		// 	}
+		// 	else{
+		// 		$(this).addClass('not-active');
+		// 		removeArray(filters, $(this).attr('data-filter'));
+		// 		console.log(filters);
+		// 	}
+		//  $('.list-projects_template').isotope({ 
+		//  		filter: filters.join(', '), 
+		//  		transitionDuration: 200,
+		// 	 	// masonry: {
+	 //    // 		gutter: 20
+	 //  		// }
+  // 		});
+		// });
 
 		$('.filters > ul > li').on( 'click', function() {
 			if($(this).hasClass('not-active')){
@@ -142,17 +162,39 @@ function init(){
 				removeArray(filters, $(this).attr('data-filter'));
 				console.log(filters);
 			}
-		 $('.list-projects_template').isotope({ 
+			$('.list-projects_template').isotope({ 
 		 		filter: filters.join(', '), 
 		 		transitionDuration: 200,
-			 	masonry: {
-	    		gutter: 20
-	  		}
-  		});
+			});
+			$('.list-projects_text ul').isotope({ 
+		 		filter: filters.join(', '), 
+		 		transitionDuration: 200,
+			});
 		});
 
 
 
+
+
+		//  -------------- projets ---------------
+		// au survol allume liste de gauche et image à droite
+	$('.list-projects_text li').mouseenter(function(){
+		var projectUid = $(this).attr('data-project');
+		$('.list-projects li[data-project="'+projectUid+'"]').addClass('active');
+	});
+	$('.list-projects_text li').mouseleave(function(){
+		var projectUid = $(this).attr('data-project');
+		$('.list-projects li[data-project="'+projectUid+'"]').removeClass('active');
+	});
+
+	$('.list-projects li').mouseenter(function(){
+		var projectUid = $(this).attr('data-project');
+		$('.list-projects_text li[data-project="'+projectUid+'"]').addClass('active');
+	});
+	$('.list-projects li').mouseleave(function(){
+		var projectUid = $(this).attr('data-project');
+		$('.list-projects_text li[data-project="'+projectUid+'"]').removeClass('active');
+	});
 
 	//  -------------- actualités ---------------
 	// déplier actualités
@@ -172,12 +214,12 @@ function init(){
 	// déplier projet
 	$('.projet_text-projet .see-more').on('click', function(){
 		if($(this).hasClass('active')){
-			$(this).removeClass('active');
+			$(this).removeClass('active').html(' En savoir plus');
 			$(this).parents('.projet_text-projet').find('.projet_text').removeClass('active');
 		}
 		else{
 			console.log($(this).parent());
-			$(this).addClass('active');
+			$(this).addClass('active').html(' Replier');
 			$(this).parents('.projet_text-projet').find('.projet_text').addClass('active');
 		}	
 	});

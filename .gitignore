@@ -3,6 +3,7 @@
 package-lock.json
 
 /content
+/content-old
 /media
 /node_modules
 /site/accounts

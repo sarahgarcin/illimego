@@ -2,7 +2,7 @@
 	<?php $categories = $site->find('projets')->children()->listed();?>
 	<ul>
 		<?php foreach($categories as $category):?>
-			<li data-filter=".<?= $category->uid()?>">
+			<li class="not-active" data-filter=".<?= $category->uid()?>">
 				<?= $category->title()?>
 			</li>
 		<?php endforeach ?>

@@ -26,8 +26,8 @@
 			<aside class="agence_text-inner_aside no-padding-top col-xs-15 col-md-4 col-md-offset-1">
 				<h3>Contact</h3>
 				<?= $page->contact()->kt()?>
-				<h3>Publication</h3>
-				<?= $page->publications()->kt()?>
+<!-- 				<h3>Publication</h3>
+				<?= $page->publications()->kt()?> -->
 			</aside>
 			
 		</div>
@@ -49,6 +49,21 @@
 				<?php endforeach?>
 			</ul>
 
+		</div>
+		<div class="agence_publi">
+			<h2>Publications</h2>
+			<ul class="list-publications">
+				<?php foreach($page->publications()->toStructure() as $publi):?>
+					<li>
+						<a href="<?= $publi->pdf()->toFile()->url()?>" title="<?= $publi->title()?>" target="_blank"><?= $publi->title()?></a>
+							<?php if($image = $publi->cover()->toFile()):?>
+								<figure>
+				  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
+				  			</figure>
+							<?php endif; ?>
+					</li>
+				<?php endforeach?>
+			</ul>
 		</div>
 	</main>
 </div>

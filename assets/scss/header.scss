@@ -248,6 +248,7 @@ header{
 				padding:0;
 				margin:0;
 				position:fixed;
+				// right: $marginPage;
 				left:calc(86.667% - #{$marginPage} + 10px);
 				// padding: $marginPage;
 			}

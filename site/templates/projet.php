@@ -6,17 +6,8 @@
 		<div class="page_title">
 			<?= $page->parent()->parent()->title()?>
 		</div>
-		<!-- ça ne marche pas encore parce qu'il faut faire le prev / next sur toute la liste de projets ! -->
 		<!-- collection listant tous les projets définie dans site>collections>projets.php-->
 		<?php $projets = $kirby->collection("projets");?>
-		<?php //print_r($projets)?>
-		<!-- <?php if($prev=$page->prev($projets)): ?>
-			<a href="<?=  $prev->url() ?>">Préc</a>
-		<?php endif ?>
-
-		<?php if($next=$page->next($projets)): ?>
-			<a href="<?=  $next->url() ?>">Suiv</a>
-		<?php endif ?> -->
 		<div class="prev_nex-nav">
 				<?php if ($projets->isNotEmpty()) : ?>
 				  <?php if ($prevPage = $page->getPrev($projets)) : ?>
@@ -35,13 +26,13 @@
 		<aside class="projet_text-projet col-xs-15 col-md-4 hide-for-small-only">
 			<div class="projet_introduction-text">
 				<?= $page->summary()->kt()?>
-				<span class="see-more hide-for-small-only">
-					En savoir plus
-				</span>
 			</div>
 			<div class="projet_text">
 				<?= $page->text()->kt()?>
 			</div>
+			<span class="see-more hide-for-small-only">
+				En savoir plus
+			</span>
 			<?php if($page->infos()->isNotEmpty()):?>
 				<div class="projet_infos-text">
 					<h2>Infos projet</h2>
@@ -50,11 +41,8 @@
 			<?php endif;?>
 		</aside>
 		<!-- fin DESKTOP -->
-		<main class="projet_main col-xs-15 col-sm-9 col-sm-offset-3 col-md-8">
+		<main class="projet_main projet_text-projet col-xs-15 col-sm-9 col-sm-offset-3 col-md-8">
 			<h1><?= $page->title()?></h1>
-			<div class="projet_introduction-text show-for-small-only">
-				<?= $page->summary()->kt()?>
-			</div>
 			<?php if($page->hasImages()):?>
 				<ul class="projet_images-gallery photoswipe" itemscope itemtype="http://schema.org/ImageGallery">
 					<?php foreach($page->images() as $image):?>
@@ -74,9 +62,15 @@
 					<?php endforeach ?>
 				</ul>
 			<?php endif; ?>
+			<div class="projet_introduction-text show-for-small-only">
+				<?= $page->summary()->kt()?>
+			</div>
 			<div class="projet_text show-for-small-only">
 				<?= $page->text()->kt()?>
 			</div>
+			<span class="see-more show-for-small-only">
+				En savoir plus
+			</span>
 			<?php if($page->infos()->isNotEmpty()):?>
 				<div class="projet_infos-text show-for-small-only">
 					<h2>Infos projet</h2>
@@ -87,7 +81,7 @@
 			<div class="prev_nex-nav hide-for-small-only">
 				<?php if ($projets->isNotEmpty()) : ?>
 				  <?php if ($prevPage = $page->getPrev($projets)) : ?>
-				      <a href="<?= $prevPage->url() ?>">← Précédant</a>
+				      <a href="<?= $prevPage->url() ?>">← Précédent</a>
 				  <?php endif ?>
 
 				  <?php if ($nextPage = $page->getNext($projets)) : ?>

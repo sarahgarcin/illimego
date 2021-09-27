@@ -13,6 +13,9 @@ fields:
   year: 
     label: Date du projet
     type: text
+  place: 
+    label: Lieu du projet
+    type: text
   text:
     label: Texte 
     type: markdown
