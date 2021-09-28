@@ -24,7 +24,7 @@
 - ok - On supprime la maçonnerie
 - Implémenter un recadrage automatique 
 - je sais pas comment faire ça - Ilimelgo fer à droite
-- Bug sur fr / en quand on est dans projets + quand on a le menu ouvert 
+- ok - Bug sur fr / en quand on est dans projets + quand on a le menu ouvert 
 
 ### Actus
 
