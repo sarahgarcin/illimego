@@ -40,6 +40,7 @@ footer{
 	background: #FFF;
 	pointer-events: auto;
 	padding:0;
+	ul{position: relative;}
 	li{
 		font-family: $titleFont; 
 		text-transform: uppercase;

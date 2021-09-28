@@ -1,6 +1,7 @@
 # Job log
 
 ## to do sarah
+- réorganiser les projets dans les dossiers
 - enlever fichier packery
 - enlever la grille
 

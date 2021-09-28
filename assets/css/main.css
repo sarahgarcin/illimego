@@ -362,6 +362,8 @@ footer {
   background: #FFF;
   pointer-events: auto;
   padding: 0; }
+  .languages ul {
+    position: relative; }
   .languages li {
     font-family: "Bw Gradual";
     text-transform: uppercase;
