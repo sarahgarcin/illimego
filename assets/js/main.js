@@ -115,15 +115,22 @@ function init(){
 	// --------------  HOME -------------- 
 	// Packery
 		// init Packery
-		// var $grid = $('.list-projects').packery({
-		//   itemSelector: 'li',
-	 //  	gutter: 20
-		// });
-		// $grid.packery();
-		// layout Packery after each image loads
-		// $grid.imagesLoaded().progress( function() {
-		//   $grid.packery();
-		// });
+		// if($('body').attr('data-template') == "home" || $('body').attr('data-template') == "projets"){
+			var $grid = $('.list-projects').packery({
+			  itemSelector: 'li',
+		  	gutter: 20
+			});
+			$grid.packery();
+
+			// $grid.imagesLoaded( function() {
+	  //     $grid.packery('layout');
+	  //   });
+
+			// layout Packery after each image loads
+			$grid.imagesLoaded().progress( function() {
+			  $grid.packery();
+			});
+		// }
 
 		var filters =[] ;
 

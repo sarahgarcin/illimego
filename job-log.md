@@ -2,20 +2,23 @@
 
 ## to do sarah
 - réorganiser les projets dans les dossiers
-- enlever fichier packery
 - enlever la grille
+- passer en prod ?
 
-## à envoyer à julien 
-- favicon
-- page projets: liste à gauche fixe ?
-- je sais pas comment faire ça - Ilimelgo fer à droite
-- non - Est il possible de mettre un projet dans plusieurs catégories ?
-- j'ai pas compris, capture d'écran ? - Différence d’espace sous les titres des images quand on clique dans projets vs quand on selectionne des projets
-- j'ai laissé le principe de base qui était combinatoire mais je ne suis pas sûre que ça soit ça qu'ils veuillent - Arriver dans projets sur tous les projets décochés (et donc apparents)
-- je fais quoi du coup ? photos d’agence : on garde un format portrait pour la photo de Valérian et Catherine, on ajoutera surement une photo d’équipe (la photo sera prise tout début octobre)
-- pas compris - sur la liste de tous les projets il n’y a pas les titres qui s’affichent (je crois que je ne t’en ai pas parlé au tel)
-- il faut que je checke le responsive après toutes les modifs
-
+## faits
+- ok - changer le logo 
+- ok - favicon 
+- ok - les mentions légales ne sont pas renseignées 
+  > Il faut qu’ils écrivent quoi obligatoirement ?
+- ok - les liens vers les réseaux sociaux ne sont pas les bons 
+  > https://www.instagram.com/ilimelgo/
+  > https://fr.linkedin.com/company/ilimelgo 
+  > https://www.facebook.com/ilimelgo/
+- ok - On remet la maçonnerie
+- ok - On peut ajouter l’option actu qui apparaitrait sur la home
+- ok - Page 404 = jeu de tetris 
+- ok - verifier responsive
+- ok - verifier mode nuit
 
 ## to do julien/ilimelgo 
 

@@ -43,7 +43,7 @@ body.night{
       filter: invert(1);
     }
   }
-  header{background: #000;}
+  // header{background: #000;}
   header .main-nav > ul > li{border-color: #FFF;}
   .page_header{
     background: #000; 
@@ -100,6 +100,14 @@ p a {
   text-decoration: underline;
 }
 
+h2 + p {
+  margin-top: 0;
+}
+
+p + h2{
+  margin-top: $marginBig;
+}
+
 figure.portrait{
   width: 70%;
 }
@@ -125,6 +133,7 @@ figcaption{
 @import "home.scss";
 @import "article.scss";
 @import "footer.scss";
+@import "tetris.scss";
 
 // -------------- MOBILE-FIRST GENERAL --------------
 .show-for-small-only{
@@ -145,6 +154,14 @@ main{
 
 main, aside{
   padding-top: 128px; 
+}
+
+body[data-template="home"] main{
+   padding-top: 70px; 
+}
+
+.content-inner{
+  padding:0;
 }
 
 aside p:first-child{
@@ -252,6 +269,34 @@ article.actualite{
 }
 
 // PROJETS
+
+.filters{
+  margin: $marginSmall 0 0;
+  // margin: 50px 0;
+  font-family: $titleFont;
+  font-size: $desktopSmallSmall;
+  text-transform: uppercase; 
+
+  column-count: 2;
+
+  li{
+    margin-bottom: $marginSmall/2;
+    cursor: pointer;
+    
+    // display: inline-block;
+    // margin-right: 15px;
+
+    &::before{
+      content:"⦿";
+      // margin-right: 15px;
+      margin-right: 0px;
+    }
+    &.not-active::before{
+      content:"◯";
+    }
+  }
+}
+
 aside.list-projects_text{
   li{
     font-family: $titleFont;
@@ -436,24 +481,21 @@ aside.list-projects_text{
       display:flex;
   }
 
-  main{
+  main, body[data-template="home"] main{
     padding-top: 0px; 
+  }
+
+  .content-inner{
+    padding-right:1rem;
+    padding-left:1rem;
   }
 
   .filters{
     margin: 50px 0;
-    font-family: $titleFont;
-    font-size: $desktopSmallSmall;
-    text-transform: uppercase; 
+    column-count: 1;
     li{
-      margin-bottom: $marginSmall/2;
-      cursor: pointer;
       &::before{
-        content:"⦿";
         margin-right: 15px;
-      }
-      &.not-active::before{
-        content:"◯";
       }
     }
   }
@@ -483,7 +525,7 @@ aside.list-projects_text{
 
 
   // PROJET
-  .projet_main, .projets_main{
+  .projet_main{
     margin-left : 0;
   }
   .projet_main h1{

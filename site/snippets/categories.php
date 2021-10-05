@@ -1,4 +1,4 @@
-<div class="filters hide-for-small-only">
+<div class="filters">
 	<?php $categories = $site->find('projets')->children()->listed();?>
 	<ul>
 		<?php foreach($categories as $category):?>

@@ -14,7 +14,7 @@
 			  			</figure>
 			  		</div>
 		  		</a>
-		  		<div class="list-project_infos hide-for-small-only">
+		  		<div class="list-project_infos">
 		  			<?= $project->title()?><br>
 		  			<?= $project->year()?>
 		  		</div>

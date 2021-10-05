@@ -28,8 +28,6 @@ body.night {
   body.night .desktop-menu_logo figure, body.night .mobile-menu_logo_inner figure {
     -webkit-filter: invert(1);
     filter: invert(1); }
-  body.night header {
-    background: #000; }
   body.night header .main-nav > ul > li {
     border-color: #FFF; }
   body.night .page_header {
@@ -63,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-top: 0;
-  font-size: 40px; }
+  font-size: 38px; }
 
 p {
   margin: 20px 0;
@@ -72,6 +70,12 @@ p {
 
 p a {
   text-decoration: underline; }
+
+h2 + p {
+  margin-top: 0; }
+
+p + h2 {
+  margin-top: 40px; }
 
 figure.portrait {
   width: 70%; }
@@ -112,7 +116,7 @@ header {
       justify-content: flex-end; }
   header .mobile-menu_title h1 {
     font-weight: 100;
-    font-size: 35px;
+    font-size: 30px;
     margin: 0;
     cursor: pointer;
     pointer-events: auto; }
@@ -237,7 +241,7 @@ header {
       margin: 0; }
     header .mobile-menu_title h1 {
       margin-top: -10px;
-      font-size: 40px; }
+      font-size: 38px; }
     header .header-right {
       position: fixed;
       right: 28px;
@@ -298,7 +302,15 @@ header {
 .list-projects {
   padding: 0; }
   .list-projects li {
-    padding: 10px; }
+    padding: 0px; }
+
+.list-project_infos {
+  font-family: "Bw Gradual";
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 20px; }
+  .list-project_infos::before {
+    content: "—"; }
 
 @media only screen and (max-width: 48em) {
   .list-projects {
@@ -312,9 +324,7 @@ header {
   .list-projects li {
     position: relative; }
   .list-project_infos {
-    font-family: "Bw Gradual";
-    font-size: 1em;
-    line-height: 1.4;
+    margin-bottom: 0;
     opacity: 0;
     position: absolute;
     bottom: 0;
@@ -325,8 +335,6 @@ header {
     -webkit-transition: opacity 0.2s ease, background 0.2s ease;
     -o-transition: opacity 0.2s ease, background 0.2s ease;
     transition: opacity 0.2s ease, background 0.2s ease; }
-    .list-project_infos::before {
-      content: "—"; }
   .list-projects li:hover .list-project_infos {
     opacity: 1;
     background: white; } }
@@ -447,7 +455,7 @@ footer {
       padding: 0;
       margin-left: 60%; }
     footer .lower-left-text {
-      font-size: 40px;
+      font-size: 38px;
       padding: 0;
       padding-left: 0px;
       line-height: 0.7; }
@@ -470,6 +478,113 @@ footer {
     .languages li .select-btn {
       margin-right: 15px; } }
 
+/* needs to correspond to piece.js */
+.white {
+  background-color: #f0f0f0;
+  border: 1px solid #bdbdbd;
+  -webkit-box-shadow: inset 0 0 1px 1px white;
+  box-shadow: inset 0 0 1px 1px white; }
+
+.blue {
+  background-color: #3498db;
+  border: 1px solid #196090;
+  -webkit-box-shadow: inset 0 0 1px 1px #8bc4ea;
+  box-shadow: inset 0 0 1px 1px #8bc4ea; }
+
+.yellow {
+  background-color: #f1c40f;
+  border: 1px solid #927608;
+  -webkit-box-shadow: inset 0 0 1px 1px #f7dc6f;
+  box-shadow: inset 0 0 1px 1px #f7dc6f; }
+
+.green {
+  background-color: #2ecc71;
+  border: 1px solid #1b7943;
+  -webkit-box-shadow: inset 0 0 1px 1px #7ee2a8;
+  box-shadow: inset 0 0 1px 1px #7ee2a8; }
+
+.red {
+  background-color: #e74c3c;
+  border: 1px solid #a82315;
+  -webkit-box-shadow: inset 0 0 1px 1px #f29f97;
+  box-shadow: inset 0 0 1px 1px #f29f97; }
+
+.grey {
+  background-color: #95a5a6;
+  border: 1px solid #617374;
+  -webkit-box-shadow: inset 0 0 1px 1px #ccd4d5;
+  box-shadow: inset 0 0 1px 1px #ccd4d5; }
+
+.black {
+  background-color: #34495e;
+  border: 1px solid #10161c;
+  -webkit-box-shadow: inset 0 0 1px 1px #587ca0;
+  box-shadow: inset 0 0 1px 1px #587ca0; }
+
+.purple {
+  background-color: #9b59b6;
+  border: 1px solid #623475;
+  -webkit-box-shadow: inset 0 0 1px 1px #c6a0d5;
+  box-shadow: inset 0 0 1px 1px #c6a0d5; }
+
+.white {
+  background-color: #ecf0f1;
+  border: 1px solid #b1c2c6;
+  -webkit-box-shadow: inset 0 0 1px 1px white;
+  box-shadow: inset 0 0 1px 1px white; }
+
+.orange {
+  background-color: #e67e22;
+  border: 1px solid #924d10;
+  -webkit-box-shadow: inset 0 0 1px 1px #f0b37e;
+  box-shadow: inset 0 0 1px 1px #f0b37e; }
+
+.turquoise {
+  background-color: #1abc9c;
+  border: 1px solid #0e6252;
+  -webkit-box-shadow: inset 0 0 1px 1px #55e7ca;
+  box-shadow: inset 0 0 1px 1px #55e7ca; }
+
+.tetris {
+  margin-top: 40px; }
+
+.event-counter {
+  display: none; }
+
+.score,
+.level {
+  z-index: 1;
+  width: 202px;
+  margin: 0 0 5px;
+  font-family: "IBM Plex Mono"; }
+
+.score:before {
+  content: 'score: '; }
+
+.level:before {
+  content: 'level: '; }
+
+.tetris-grid {
+  width: 202px;
+  height: 402px;
+  border: 1px solid #000; }
+
+.controls {
+  font-family: "IBM Plex Mono";
+  font-size: 0.8em; }
+
+.preview-cells {
+  width: 102px;
+  height: 102px;
+  margin-top: 20px;
+  border: 1px solid #000; }
+
+.cell {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  float: left; }
+
 .show-for-small-only {
   display: block; }
 
@@ -486,6 +601,12 @@ main {
 
 main, aside {
   padding-top: 128px; }
+
+body[data-template="home"] main {
+  padding-top: 70px; }
+
+.content-inner {
+  padding: 0; }
 
 aside p:first-child {
   margin-top: 0; }
@@ -576,6 +697,23 @@ article.actualite {
   .see-more:hover {
     font-weight: 500; }
 
+.filters {
+  margin: 10px 0 0;
+  font-family: "Bw Gradual";
+  font-size: 0.85em;
+  text-transform: uppercase;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2; }
+  .filters li {
+    margin-bottom: 5px;
+    cursor: pointer; }
+    .filters li::before {
+      content: "⦿";
+      margin-right: 0px; }
+    .filters li.not-active::before {
+      content: "◯"; }
+
 aside.list-projects_text li {
   font-family: "Bw Gradual";
   font-weight: 300;
@@ -651,7 +789,7 @@ aside.list-projects_text li {
 .agence_publi {
   margin-bottom: 400px; }
   .agence_publi h2 {
-    font-size: 40px; }
+    font-size: 38px; }
   .agence_publi li {
     font-family: "Bw Gradual";
     position: relative;
@@ -672,7 +810,7 @@ aside.list-projects_text li {
       pointer-events: none; }
 
 .agence_equipe h2 {
-  font-size: 40px; }
+  font-size: 38px; }
 
 .agence_equipe li {
   margin-bottom: 40px;
@@ -705,21 +843,18 @@ aside.list-projects_text li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  main {
+  main, body[data-template="home"] main {
     padding-top: 0px; }
+  .content-inner {
+    padding-right: 1rem;
+    padding-left: 1rem; }
   .filters {
     margin: 50px 0;
-    font-family: "Bw Gradual";
-    font-size: 0.85em;
-    text-transform: uppercase; }
-    .filters li {
-      margin-bottom: 5px;
-      cursor: pointer; }
-      .filters li::before {
-        content: "⦿";
-        margin-right: 15px; }
-      .filters li.not-active::before {
-        content: "◯"; }
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1; }
+    .filters li::before {
+      margin-right: 15px; }
   .list-projects_template li {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
@@ -740,7 +875,7 @@ aside.list-projects_text li {
     font-family: "Bw Gradual"; }
     .cat-title:before {
       content: "–"; }
-  .projet_main, .projets_main {
+  .projet_main {
     margin-left: 0; }
   .projet_main h1:before {
     content: "— "; }

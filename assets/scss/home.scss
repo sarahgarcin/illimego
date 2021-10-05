@@ -2,7 +2,18 @@
 .list-projects {
 	padding: 0;
 	li{
-		padding:10px;
+		// padding:10px;
+		padding:0px;
+	}
+}
+
+.list-project_infos{
+	font-family: $titleFont;
+	font-size: $desktopSmallText;
+	line-height: 1.4;
+	margin-bottom: $marginNormal;
+	&::before{
+		content: "—";
 	}
 }
 
@@ -33,9 +44,7 @@
 		// }
 	}
 	.list-project_infos{
-		font-family: $titleFont;
-		font-size: $desktopSmallText;
-		line-height: 1.4;
+		margin-bottom: 0;
 		opacity: 0; 
 		position: absolute;
 		bottom: 0;
@@ -44,9 +53,6 @@
 		background: #FFF;
 		padding: $marginSmall;
 		transition: opacity 0.2s ease, background 0.2s ease;
-		&::before{
-			content: "—";
-		}
 	}
 	
 	.list-projects li:hover .list-project_infos{

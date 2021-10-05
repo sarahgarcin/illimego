@@ -8,7 +8,7 @@
 </div>
 
 <div class="row">
-	<aside class="list-projects_text col-xs-15 col-md-4 hide-for-small-only">
+<!-- 	<aside class="list-projects_text col-xs-15 col-md-4 hide-for-small-only">
 		<?php foreach($page->children()->listed() as $cat):?>
 			<div class="cat-title">
 				<?= $cat->title()?>
@@ -36,8 +36,8 @@
 			</ul>
 		<?php endforeach;?>
 			
-	</aside>
-	<main class="projets_main col-xs-15 col-sm-11 col-sm-offset-2 col-md-8">
+	</aside> -->
+	<main class="projets_main col-xs-15 col-sm-11 col-sm-offset-2 col-md-8 col-md-offset-4">
 		<h1 class="hide-for-small-only"><?= $page->title()->html()?></h1>
 		<ul class="list-projects list-projects_template row">
 		  <?php foreach ($projects as $project): ?>
@@ -51,7 +51,7 @@
 				  		</div>
 				  	<?php endif;?>
 		  		</a>
-		  		<div class="list-project_infos hide-for-small-only">
+		  		<div class="list-project_infos">
 		  			<?= $project->title()?>
 		  			<div class="date-place">
 		 					<?php if($project->year()->isNotEmpty()):?>

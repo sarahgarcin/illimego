@@ -1,0 +1,95 @@
+$cell-size:20px;
+$grid-width:($cell-size * 10) + 2px;
+$grid-height:($cell-size * 20) + 2px;
+$preview-size:($cell-size * 5) + 2px;
+
+/* needs to correspond to piece.js */
+$colours:
+    ('white',#f0f0f0),
+    ('blue',#3498db),
+    ('yellow',#f1c40f),
+    ('green',#2ecc71),
+    ('red',#e74c3c),
+    ('grey',#95a5a6),
+    ('black',#34495e),
+    ('purple',#9b59b6),
+    ('white',#ecf0f1),
+    ('orange',#e67e22),
+    ('turquoise',#1abc9c);
+
+@each $colour, $hex in $colours
+{
+    .#{$colour}
+    {
+        background-color:$hex; 
+        border:1px solid darken($hex,20);
+        box-shadow:inset 0 0 1px 1px lighten($hex,20);
+    }
+}
+
+.tetris {
+  margin-top: $marginBig;
+}
+
+.event-counter{
+  display:none;
+    // width:$grid-width;
+    // height:20px;
+    // margin:20px auto;
+    // font-size:10px;
+    // opacity:0;
+}
+
+.score,
+.level {
+    // position:fixed;
+    // left:463px;
+    z-index:1;
+    width:$grid-width;
+    // height:40px;
+    margin:0 0 5px;
+    font-family: $infosFont;
+}
+
+.score{
+  &:before{
+    content:'score: ';
+  }
+}
+
+.level{
+    &:before
+    {
+        content:'level: ';
+    }
+}
+
+.tetris-grid{
+    width:$grid-width;
+    height:$grid-height;
+    border:1px solid #000;
+}
+
+.controls{
+  font-family: $infosFont;
+  font-size: 0.8em;
+}
+
+.preview-cells
+{
+    width:$preview-size;
+    height:$preview-size;
+    // position:fixed;
+    // top:50px;
+    // left:520px;
+    margin-top: 20px;
+    border:1px solid #000;
+}
+
+.cell
+{
+    width:$cell-size;
+    height:$cell-size;
+    display:inline-block;
+    float:left;
+}
