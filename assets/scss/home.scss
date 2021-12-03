@@ -3,7 +3,8 @@
 	padding: 0;
 	li{
 		// padding:10px;
-		padding:0px;
+		// padding:0px;
+		margin-bottom: $marginBig;
 	}
 }
 
@@ -11,10 +12,21 @@
 	font-family: $titleFont;
 	font-size: $desktopSmallText;
 	line-height: 1.4;
-	margin-bottom: $marginNormal;
+	// margin-bottom: $marginNormal;
 	&::before{
 		content: "—";
 	}
+}
+
+.no-figure{
+	height: 220px;
+	background: lightgrey;
+	font-family: $titleFont;
+	padding: $marginSmall;
+	font-size: 80px;
+	color: grey;
+	text-align: center; 
+	overflow: hidden;
 }
 
 @media only screen and (max-width: 48em){
@@ -25,7 +37,7 @@
 
 
 // -------------- DESKTOP HOME --------------
-@media only screen and (min-width: 62em){
+@media only screen and (min-width: 65em){
 	.list-projects {
 		// margin: inherit;
 	}

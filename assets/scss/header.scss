@@ -45,7 +45,7 @@ header{
 	.mobile-menu_btn{
 		display:block;
 		position:relative;
-		margin:7px 10px 0 0;
+		margin:5px 10px 0 0;
 		cursor:pointer;
 		height:24px;
 		width: 20px;
@@ -97,15 +97,15 @@ header{
 			text-transform: uppercase;
 			transition: text-align 0.3s linear;
 			// a{color: $mainColor;}
-			&.active{
-				// color: #000;
-				text-align: left;
-				& > span{
-					display: block;
-					text-align: left;
-					// margin-bottom: $marginNormal;
-				}
-			}	
+			// &.active{
+			// 	// color: #000;
+			// 	text-align: left;
+			// 	& > span{
+			// 		display: block;
+			// 		text-align: left;
+			// 		// margin-bottom: $marginNormal;
+			// 	}
+			// }	
 			&:last-child{
 				border-bottom: 1px solid $mainColor;
 			}			
@@ -170,7 +170,7 @@ header{
 
 
 // -------------- DESKTOP HEADER --------------
-@media only screen and (min-width: 62em){
+@media only screen and (min-width: 65em){
 	header{
 		position: absolute;
 		padding: $marginPage;
@@ -186,6 +186,10 @@ header{
 		.nav{
 			padding: 0;
 			margin:0;
+			&.active-desktop{
+				max-height: 100vh; 
+				overflow: auto;
+			}
 		}
 		.mobile-menu_title {
 			h1{
@@ -261,7 +265,7 @@ header{
 	header{
 		.mobile-menu_title {
 			h1{
-				font-size: 31px;
+				font-size: 30px;
 				margin-top: -2px;
 			}
 		} 
@@ -271,6 +275,18 @@ header{
 			}
 		}
 	}
+}
+
+// -------------- BIG SCREEN HEADER --------------
+@media only screen and (min-width: 100em){
+	header{
+		.mobile-menu_title {
+			h1{
+				font-size: 42px;
+			}
+		}
+	}
+
 }
 
 

@@ -1,4 +1,4 @@
-<div class="nav row col-md-15">
+<div class="nav row col-md-15 <?= r($page->template()=='projet', 'active-desktop')?>">
 	<!-- Mobile nav -->
 	<nav class="main-nav main-nav_mobile col-xs-15 show-for-small-only">
 		<ul class="main-nav_first-level">

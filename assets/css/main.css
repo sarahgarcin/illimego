@@ -10,7 +10,8 @@ body {
   margin: 14px;
   font-size: 16px;
   font-family: "IBM Plex Serif";
-  line-height: 1.22; }
+  line-height: 1.22;
+  overflow-x: hidden; }
 
 body.night {
   background: #000;
@@ -61,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-top: 0;
-  font-size: 38px; }
+  font-size: 37px; }
 
 p {
   margin: 20px 0;
@@ -125,7 +126,7 @@ header {
   header .mobile-menu_btn {
     display: block;
     position: relative;
-    margin: 7px 10px 0 0;
+    margin: 5px 10px 0 0;
     cursor: pointer;
     height: 24px;
     width: 20px;
@@ -190,11 +191,6 @@ header {
       -webkit-transition: text-align 0.3s linear;
       -o-transition: text-align 0.3s linear;
       transition: text-align 0.3s linear; }
-      header .main-nav > ul > li.active {
-        text-align: left; }
-        header .main-nav > ul > li.active > span {
-          display: block;
-          text-align: left; }
       header .main-nav > ul > li:last-child {
         border-bottom: 1px solid #000; }
   header .main-nav_submenu {
@@ -230,7 +226,7 @@ header {
     pointer-events: auto;
     padding: 0; }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 65em) {
   header {
     position: absolute;
     padding: 28px;
@@ -239,9 +235,12 @@ header {
     header .nav {
       padding: 0;
       margin: 0; }
+      header .nav.active-desktop {
+        max-height: 100vh;
+        overflow: auto; }
     header .mobile-menu_title h1 {
       margin-top: -10px;
-      font-size: 38px; }
+      font-size: 37px; }
     header .header-right {
       position: fixed;
       right: 28px;
@@ -294,29 +293,42 @@ header {
 
 @media only screen and (min-width: 48em) and (max-width: 1210px) {
   header .mobile-menu_title h1 {
-    font-size: 31px;
+    font-size: 30px;
     margin-top: -2px; }
   header .desktop-menu .desktop-menu_logo figure {
     width: 60px; } }
 
+@media only screen and (min-width: 100em) {
+  header .mobile-menu_title h1 {
+    font-size: 42px; } }
+
 .list-projects {
   padding: 0; }
   .list-projects li {
-    padding: 0px; }
+    margin-bottom: 40px; }
 
 .list-project_infos {
   font-family: "Bw Gradual";
   font-size: 1em;
-  line-height: 1.4;
-  margin-bottom: 20px; }
+  line-height: 1.4; }
   .list-project_infos::before {
     content: "—"; }
+
+.no-figure {
+  height: 220px;
+  background: lightgrey;
+  font-family: "Bw Gradual";
+  padding: 10px;
+  font-size: 80px;
+  color: grey;
+  text-align: center;
+  overflow: hidden; }
 
 @media only screen and (max-width: 48em) {
   .list-projects {
     margin: 0; } }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 65em) {
   .list-projects li {
     width: calc(50% - 1rem); }
   .list-projects_selected li {
@@ -353,7 +365,7 @@ footer {
   footer a {
     text-decoration: none; }
   footer .lower-left-text {
-    font-size: 26px; }
+    font-size: 30px; }
   footer .lower-right-text {
     font-size: 28px; }
   footer .lower-right-text, footer .lower-left-text {
@@ -445,7 +457,7 @@ footer {
 .icon-twitter::before {
   content: '\f099'; }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 65em) {
   footer {
     background: #FFF;
     padding: 28px; }
@@ -455,7 +467,7 @@ footer {
       padding: 0;
       margin-left: 60%; }
     footer .lower-left-text {
-      font-size: 38px;
+      font-size: 37px;
       padding: 0;
       padding-left: 0px;
       line-height: 0.7; }
@@ -477,6 +489,14 @@ footer {
       margin-left: calc(15px + 17px); }
     .languages li .select-btn {
       margin-right: 15px; } }
+
+@media only screen and (min-width: 48em) and (max-width: 1210px) {
+  footer .lower-left-text {
+    font-size: 30px; } }
+
+@media only screen and (min-width: 100em) {
+  footer .lower-left-text {
+    font-size: 42px; } }
 
 /* needs to correspond to piece.js */
 .white {
@@ -614,6 +634,19 @@ aside p:first-child {
 .no-padding-top {
   padding-top: 0; }
 
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .page_header {
   position: fixed;
   width: calc(100% - (14px*2));
@@ -739,6 +772,7 @@ aside.list-projects_text li {
     background: transparent; }
 
 .projet_images-gallery figure {
+  margin: auto;
   margin-bottom: 20px; }
 
 .projet_introduction-text p {
@@ -789,7 +823,7 @@ aside.list-projects_text li {
 .agence_publi {
   margin-bottom: 400px; }
   .agence_publi h2 {
-    font-size: 38px; }
+    font-size: 37px; }
   .agence_publi li {
     font-family: "Bw Gradual";
     position: relative;
@@ -810,7 +844,7 @@ aside.list-projects_text li {
       pointer-events: none; }
 
 .agence_equipe h2 {
-  font-size: 38px; }
+  font-size: 37px; }
 
 .agence_equipe li {
   margin-bottom: 40px;
@@ -826,7 +860,7 @@ aside.list-projects_text li {
     content: "—";
     display: block; }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 65em) {
   body {
     margin-bottom: 100px;
     margin: 28px; }

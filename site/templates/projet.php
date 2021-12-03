@@ -45,7 +45,7 @@
 			<h1><?= $page->title()?></h1>
 			<?php if($page->hasImages()):?>
 				<ul class="projet_images-gallery photoswipe" itemscope itemtype="http://schema.org/ImageGallery">
-					<?php foreach($page->images() as $image):?>
+					<?php foreach($page->images()->sortBy('sort') as $image):?>
 						<?php if($image->isPortrait()):?>
 							<?php $imageClass = "portrait"?>
 						<?php else:?>
@@ -53,7 +53,7 @@
 						<?php endif?>
 						<figure class="<?= $imageClass?>" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-image="<?= $image->thumb(['width'=> 300, 'quality' => 80])->url(); ?>">
 							<a href="<?= $image->url() ?>" class="gallery" title="<?= $image->caption() ?>" itemprop="contentUrl" data-size="<?= $image->width(); ?>x<?= $image->height(); ?>">
-		  					<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" alt="<?= $image->alt() ?>" itemprop="thumbnail"/>
+		  					<img src="<?= $image->url();?>" alt="<?= $image->alt() ?>" itemprop="thumbnail"/>
 		  				</a>
 		  				<?php if($image->caption()->isNotEmpty()):?>
 								<figcaption itemprop="caption description"><?= $image->caption()->kt()?></figcaption>

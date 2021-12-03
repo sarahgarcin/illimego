@@ -1,26 +1,61 @@
 title: Projet
-preset: page
+# preset: page
 pages: false
 
-fields:
-  cover: 
-    label: Image de couverture
-    type: files
-    multiple: false
-  summary: 
-    label: Texte d'introduction
-    type: markdown
-  year: 
-    label: Date du projet
-    type: text
-  place: 
-    label: Lieu du projet
-    type: text
-  text:
-    label: Texte 
-    type: markdown
-  infos:
-    label: Infos projet 
-    type: markdown
+
+# status:
+#   draft: true
+#   listed: true
+
+columns:
+  - width: 2/3
+    fields:
+      cover: 
+        label: Image de couverture
+        type: files
+        multiple: false
+      summary: 
+        label: Texte d'introduction
+        type: markdown
+      year: 
+        label: Date du projet
+        type: text
+      place: 
+        label: Lieu du projet
+        type: text
+      text:
+        label: Texte 
+        type: markdown
+      infos:
+        label: Infos projet 
+        type: markdown
+  - width: 1/3
+    sections:
+      images:
+        type: files
+        info: "{{ file.dimensions }}"
+        sortable: true
+        limit: 50
+
+# fields:
+#   cover: 
+#     label: Image de couverture
+#     type: files
+#     multiple: false
+#   summary: 
+#     label: Texte d'introduction
+#     type: markdown
+#   year: 
+#     label: Date du projet
+#     type: text
+#   place: 
+#     label: Lieu du projet
+#     type: text
+#   text:
+#     label: Texte 
+#     type: markdown
+#   infos:
+#     label: Infos projet 
+#     type: markdown
 
 

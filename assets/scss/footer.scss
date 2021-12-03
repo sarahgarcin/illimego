@@ -13,7 +13,7 @@ footer{
 	&.row{margin:0;}
 	a{text-decoration:none;}
 	.lower-left-text{
-		font-size: $mobileTitle;
+		font-size: 30px;
 	}
 	.lower-right-text{font-size: 28px;}
 	.lower-right-text, .lower-left-text{
@@ -144,7 +144,7 @@ footer{
 }
 
 // -------------- DESKTOP FOOTER --------------
-@media only screen and (min-width: 62em){
+@media only screen and (min-width: 65em){
 	footer{
 		background: #FFF;
 		padding:$marginPage;
@@ -203,6 +203,20 @@ footer{
 			}
 		}
 	}
+}
+
+@media only screen and (min-width: 48em) and (max-width: 1210px){
+	footer .lower-left-text{
+		font-size: 30px;
+	}
+}
+
+// -------------- BIG SCREEN --------------
+@media only screen and (min-width: 100em){
+	footer .lower-left-text{
+		font-size: 42px;
+	}
+
 }
 
 

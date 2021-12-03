@@ -1,7 +1,7 @@
 # Job log
 
 ## to do sarah
-- réorganiser les projets dans les dossiers
+- ok - réorganiser les projets dans les dossiers
 - enlever la grille
 - passer en prod ?
 

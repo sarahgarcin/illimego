@@ -1,0 +1,111 @@
+Title: Agence
+
+----
+
+Cover:
+
+- equipe-crop.jpg
+
+----
+
+Chapeau: 
+
+----
+
+Text:
+
+Que nous soyons architectes, urbanistes, aménageurs, élus, promoteurs… nous devons prendre conscience de l’importance de notre travail commun dans la fabrication de la ville de demain.
+
+## hello
+Quelle ville rêvons-nous aujourd’hui et surtout que souhaitons-nous bâtir pour nos enfants ? Ce sont des questions simples, fondamentales, mais les réponses ne sont pas toutes évidentes.
+
+Ce ne sont pas les produits conventionnels, les réponses toutes faites qui pourront satisfaire à l’avenir les besoins d’enseigner, d’habiter, de travailler et de vivre tous ensemble harmonieusement.
+
+Nous savons aussi l’urgence climatique ; à quel point nous sommes impactés par la raréfaction de nos ressources ; l’eau et la terre consommées pour construire, l’énergie dissipée et les déchets qui s’amoncellent.
+
+Ce qui nous soude au sein de l’agence, c’est l’envie de bâtir un environnement plus respectueux de la nature et de l’humain. Mais nous avons aussi besoin d’inventer, de nous aventurer en terre inconnue pour prendre la mesure des nouveaux usages.
+
+Comme pour le projet de la Cité maraichère, formidable outil pédagogique tourné vers une meilleure alimentation locale, qui interroge sur nos manières de vivre et de nous alimenter en ville.
+
+Au fil de ce site internet, d’autres projets sont présentés qui ont trait à la conception de fermes urbaines, de marché alimentaire, de serres pédagogiques…
+Tous concourent à la fabrication d’une ville que nous voudrions plus « verte » bien entendu, mais également plus « ouverte », plus « innovante », pour que puisse se réinventer notre manière d’habiter le monde.
+
+----
+
+Contact:
+
+Paris
++33 1 43 38 79 46
+57 rue de Lancry,
+Paris 10
+
+
+Rennes
++33 2 21 68 81 62
+2 rue Victor Hugo,
+35000 Rennes
+
+----
+
+Equipe:
+
+- 
+  cover:
+    - bl-valerian.jpg
+  name: Valérian Amalric
+  role: >
+    Architecte DPLG, fondateur et gérant de
+    l’agence ilimelgo
+  diplome: >
+    Diplômé de l’École d’Architecture
+    de Paris-Belleville (2002)
+- 
+  cover:
+    - bl-catherine.jpg
+  name: Catherine Gascon
+  role: Architecte HMONP, Associée
+  diplome: |
+    Diplômée de l’École d’Architecture
+    de Paris Val-de-Seine (2012)
+- 
+  cover:
+    - bl-felicie.jpg
+  name: Félicie Botton
+  role: Architecte HMONP, Chef de projet
+  diplome: |
+    Diplômée de l’Ecole d’Architecture
+    de Paris Val-de-Seine (2013)
+- 
+  cover:
+    - bl-heloise.jpg
+  name: Héloïse de Broissia
+  role: Architecte HMONP, Chef de projet
+  diplome: >
+    Diplômée de l’Ecole d’Architecture
+    de Versailles (2013)
+- 
+  cover:
+    - bl-karine.jpg
+  name: Karine Bergevin
+  role: Architecte HMONP, Chef de projet
+  diplome: >
+    Diplômée de l’Ecole d’Architecture
+    de Belleville (2013)
+
+----
+
+Publications:
+
+- 
+  cover:
+    - bl-gautier.jpg
+  title: Un autre titre — 2019
+  pdf:
+    - conversations-transborder.pdf
+  0: Suspendisse potenti
+- 
+  cover:
+    - bl-catherine.jpg
+  title: Un titre de publication — 2020
+  pdf:
+    - conversations-transborder.pdf

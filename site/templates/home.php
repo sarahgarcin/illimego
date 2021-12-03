@@ -8,13 +8,18 @@
 		  		<?php $project = $site->find($project)?>
 		  		<a href="<?= $project->url()?>" title="<?= $project->title()?>">
 			  		<div class="list-project_thumbs">
-			  			<?php $image = $project->cover()->toFile() ?>
-			  			<figure>
-			  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
-			  			</figure>
+			  			<?php if($image = $project->cover()->toFile()): ?>
+				  			<figure>
+				  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
+				  			</figure>
+				  		<?php else:?>
+				  			<div class="no-figure">
+				  				<!-- <?= $project->title()?> -->
+				  			</div>
+				  		<?php endif;?>
 			  		</div>
 		  		</a>
-		  		<div class="list-project_infos">
+		  		<div class="list-project_infos hide-for-small-only">
 		  			<?= $project->title()?><br>
 		  			<?= $project->year()?>
 		  		</div>

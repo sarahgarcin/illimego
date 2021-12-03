@@ -3,7 +3,8 @@ title: Accueil
 fields: 
   projects:
     label: Projets à afficher sur la page d'accueil
-    type: checkboxes
+    # type: checkboxes
+    type : relationship
     options: query
     # query : site.index.filterBy('template', 'actu')
     # query: site.find('projets').children.children.published
