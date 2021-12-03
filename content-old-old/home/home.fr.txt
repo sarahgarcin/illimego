@@ -1,9 +1,0 @@
-Title: Accueil
-
-----
-
-Projects: actualites/titre-actu-2, projets/rassembler/ecole-nautique-tck, projets/rassembler/centre-sportif-et-culturel, projets/amenager/europan-15, projets/amenager/centr-halle, projets/amenager/chaufferie-biomasse, projets/amenager/place-des-rencontres
-
-----
-
-Text: texte de l'accueil

@@ -1,9 +1,0 @@
-Title: Erreur
-
-----
-
-Text:
-
-Cette page n'existe pas.
-
-(link: / text: > Retour à la page d'accueil)
