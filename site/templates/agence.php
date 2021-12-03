@@ -33,9 +33,39 @@
 		</div>
 		
 		<div class="agence_equipe">
-			<h2>L’équipe</h2>
+			<h2>Les associés</h2>
 			<ul class="agence_equipe-list row">
-				<?php foreach($page->equipe()->toStructure() as $person):?>
+				<?php foreach($page->associes()->toStructure() as $person):?>
+					<li class="col-xs-75 col-md-5">
+						<?php if($image = $person->cover()->toFile()):?>
+							<figure>
+			  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
+			  			</figure>
+						<?php endif; ?>
+						<h3><?= $person->name()?></h3>
+						<div class="role"><?= $person->role()->kt()?></div>
+						<div class="diplome"><?= $person->diplome()->kt()?></div>
+					</li>
+				<?php endforeach?>
+			</ul>
+			<h2>Paris</h2>
+			<ul class="agence_equipe-list row">
+				<?php foreach($page->paris()->toStructure() as $person):?>
+					<li class="col-xs-75 col-md-5">
+						<?php if($image = $person->cover()->toFile()):?>
+							<figure>
+			  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
+			  			</figure>
+						<?php endif; ?>
+						<h3><?= $person->name()?></h3>
+						<div class="role"><?= $person->role()->kt()?></div>
+						<div class="diplome"><?= $person->diplome()->kt()?></div>
+					</li>
+				<?php endforeach?>
+			</ul>
+			<h2>Rennes</h2>
+			<ul class="agence_equipe-list row">
+				<?php foreach($page->rennes()->toStructure() as $person):?>
 					<li class="col-xs-75 col-md-5">
 						<?php if($image = $person->cover()->toFile()):?>
 							<figure>
