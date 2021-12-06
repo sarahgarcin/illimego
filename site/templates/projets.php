@@ -45,7 +45,7 @@
 		  		<a href="<?= $project->url()?>" title="<?= $project->title()?>">
 			  		<?php if($image = $project->cover()->toFile()): ?>
 				  		<div class="list-project_thumbs">
-				  			<?= $image->crop(300)?>
+				  			<?= $image->crop(1280, 900)?>
 				  			<!-- <figure>
 				  				<img src="<?= $image->url() ?>" srcset="<?= $image->srcset([300, 800, 1024, 1440, 2048]) ?>" />
 				  			</figure> -->

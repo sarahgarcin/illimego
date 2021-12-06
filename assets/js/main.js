@@ -116,7 +116,7 @@ function init(){
 	// Packery
 		// init Packery
 		// if($('body').attr('data-template') == "home" || $('body').attr('data-template') == "projets"){
-			var $grid = $('.list-projects').packery({
+			var $grid = $('.list-projects_selected').packery({
 			  itemSelector: 'li',
 		  	// gutter: 20
 			});
